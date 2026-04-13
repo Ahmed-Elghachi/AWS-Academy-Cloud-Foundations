@@ -87,7 +87,7 @@ This repository documents my learning journey through AWS Cloud Foundations. It 
 
 Each lab is designed to reinforce theoretical concepts with practical implementation.
 
-- 🔐 [IAM Introduction Lab](./AWS-Academy-Cloud-Foundations/IAM-Introduction-Lab)
+- 🔐 [IAM Introduction Lab](./IAM-Introduction-Lab)
 - 🌐 VPC & Web Server Deployment Lab  
 - 🖥️ EC2 Instance Setup Lab  
 - 📦 EBS Volume Management Lab  
