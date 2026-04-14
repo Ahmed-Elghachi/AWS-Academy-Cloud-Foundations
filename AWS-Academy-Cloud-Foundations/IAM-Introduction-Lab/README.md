@@ -62,10 +62,19 @@ In this lab, you will:
 ### 🔍 Task 1: Explore Users and Groups
 
 - Navigate to IAM Dashboard  
+
+<p align="center">
+  <img src="./screenshots/iam-dashboard.png" width="700"/>
+</p>
+
 - View existing users:
   - `user-1`
   - `user-2`
   - `user-3`
+
+<p align="center">
+  <img src="./screenshots/iam-users.png" width="700"/>
+</p>
 
 - Check:
   - Permissions → No permissions assigned  
@@ -77,10 +86,18 @@ In this lab, you will:
   - `EC2-Support`
   - `S3-Support`
 
+<p align="center">
+  <img src="./screenshots/iam-groups.png" width="700"/>
+</p>
+
 - Analyze attached policies:
   - `AmazonEC2ReadOnlyAccess`
   - `AmazonS3ReadOnlyAccess`
   - Inline policy (EC2-Admin)
+
+<p align="center">
+  <img src="./screenshots/iam-policies.png" width="700"/>
+</p>
 
 ---
 
@@ -98,6 +115,10 @@ In this lab, you will:
 - Add `user-2` → **EC2-Support**
 - Add `user-3` → **EC2-Admin**
 
+<p align="center">
+  <img src="./screenshots/add-users.png" width="700"/>
+</p>
+
 ✅ Verify each group has 1 user assigned
 
 ---
@@ -108,14 +129,33 @@ In this lab, you will:
 
 - Login using IAM Sign-in URL  
 - Access **S3 → ✅ Allowed**  
+
+<p align="center">
+  <img src="./screenshots/s3-access.png" width="700"/>
+</p>
+
 - Access **EC2 → ❌ Denied**
+
+<p align="center">
+  <img src="./screenshots/ec2-denied.png" width="700"/>
+</p>
 
 ---
 
 #### 🔹 Test user-2 (EC2 Support)
 
 - Access **EC2 → 👁️ Read-only allowed**  
+
+<p align="center">
+  <img src="./screenshots/ec2-readonly.png" width="700"/>
+</p>
+
 - Try stopping instance → ❌ Denied  
+
+<p align="center">
+  <img src="./screenshots/stop-denied.png" width="700"/>
+</p>
+
 - Access **S3 → ❌ Denied**
 
 ---
@@ -124,6 +164,10 @@ In this lab, you will:
 
 - Access EC2  
 - Start/Stop instance → ✅ Allowed  
+
+<p align="center">
+  <img src="./screenshots/ec2-admin.png" width="700"/>
+</p>
 
 ---
 
