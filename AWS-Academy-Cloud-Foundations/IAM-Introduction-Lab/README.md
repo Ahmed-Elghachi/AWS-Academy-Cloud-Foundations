@@ -2,214 +2,362 @@
 
 ## 📌 Overview
 
-AWS Identity and Access Management (IAM) is a core AWS service that enables secure control of access to AWS resources.  
-It allows you to manage users, groups, roles, and permissions in a centralized way.
+AWS Identity and Access Management (IAM) is a web service that enables Amazon Web Services (AWS) customers to manage users and user permissions in AWS.  
+
+With IAM, you can centrally manage:
+- Users  
+- Security credentials (passwords, access keys, MFA)  
+- Permissions controlling access to AWS resources  
 
 ---
 
-## 🎯 Objectives
+## 🎯 Lab Objectives
 
-In this lab, you will:
+This lab demonstrates:
 
-- Explore pre-created IAM Users and Groups  
-- Understand IAM Policies and permissions  
-- Assign users to groups based on roles  
-- Test access control using different IAM users  
-- Learn how permissions impact AWS service access  
+- Exploring pre-created IAM Users and Groups  
+- Inspecting IAM Policies  
+- Assigning users to groups  
+- Using IAM sign-in URL  
+- Testing access control  
+
+---
+
+## ⚠️ AWS Service Restrictions
+
+In this lab environment:
+- Some services are restricted  
+- Unauthorized errors may appear  
+- Only required services are accessible  
+
+---
+
+## 🧠 IAM Concepts
+
+IAM allows you to:
+
+- Manage Users and permissions  
+- Manage Roles (temporary access)  
+- Enable federated access (SSO)  
 
 ---
 
 ## ⏱️ Duration
 
-⏳ Approx. **40 minutes**
+⏳ ~40 minutes
 
 ---
 
-## 🧠 Key Concepts
+## 🚀 Accessing AWS Console
 
-- **IAM User**: Represents an individual with login credentials  
-- **IAM Group**: Collection of users with shared permissions  
-- **IAM Role**: Temporary access for users or AWS services  
-- **Policy**: JSON document defining permissions (Allow / Deny)  
-- **MFA**: Multi-Factor Authentication for enhanced security  
+### Step 1: Start Lab
 
----
-
-## 🏗️ IAM Architecture Diagram
-
-<p align="center">
-  <img src="./screenshots/iam-architecture.png" alt="IAM Architecture" width="700"/>
-</p>
-<p align="center">
-  <em>Figure 1: IAM Users, Groups and Policies mapping</em>
-</p>
+- Click **Start Lab**
+- Wait until status is **green**
 
 ---
 
-## 📌 Architecture Explanation
+### Step 2: Open AWS Console
 
-- `user-1` → assigned to **S3-Support** (Read-only S3 access)  
-- `user-2` → assigned to **EC2-Support** (Read-only EC2 access)  
-- `user-3` → assigned to **EC2-Admin** (Start/Stop EC2 instances)  
-
-👉 This demonstrates **Role-Based Access Control (RBAC)** using IAM groups.
+- Click **AWS link**
+- Allow pop-ups if blocked
 
 ---
 
-## 🛠️ Tasks & Implementation
+### Step 3: Workspace Setup
 
-### 🔍 Task 1: Explore Users and Groups
+- Arrange:
+  - Lab instructions  
+  - AWS Console  
 
-- Navigate to IAM Dashboard  
+---
+
+## 🛠️ Task 1: Explore Users and Groups
+
+### Step 1: Open IAM
+
+- Go to **Services**
+- Search **IAM**
 
 <p align="center">
   <img src="./screenshots/iam-dashboard.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 2: IAM Dashboard – AWS Management Console</em>
+  <em>Figure 1: IAM Dashboard</em>
 </p>
 
-- View existing users:
-  - `user-1`
-  - `user-2`
-  - `user-3`
+---
+
+### Step 2: View Users
+
+- Click **Users**
+- Available users:
+  - user-1  
+  - user-2  
+  - user-3  
 
 <p align="center">
   <img src="./screenshots/iam-users.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 3: IAM Users List</em>
+  <em>Figure 2: IAM Users List</em>
 </p>
 
-- Explore IAM Groups:
-  - `EC2-Admin`
-  - `EC2-Support`
-  - `S3-Support`
+---
+
+### Step 3: Inspect user-1
+
+- Permissions → ❌ None  
+- Groups → ❌ None  
+- Security Credentials → ✅ Password  
+
+📌 Conclusion: No permissions assigned yet
+
+---
+
+### Step 4: Explore Groups
+
+- Go to **User Groups**
+
+Groups:
+- EC2-Admin  
+- EC2-Support  
+- S3-Support  
 
 <p align="center">
   <img src="./screenshots/iam-groups.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 4: IAM Groups Overview</em>
+  <em>Figure 3: IAM Groups</em>
 </p>
 
-- Analyze attached policies:
+---
+
+### Step 5: Analyze EC2-Support Policy
+
+- Open **EC2-Support**
+- Go to **Permissions**
+- Policy: `AmazonEC2ReadOnlyAccess`
 
 <p align="center">
   <img src="./screenshots/iam-policies.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 5: IAM Policy Details (ReadOnly & Inline Policies)</em>
+  <em>Figure 4: EC2 ReadOnly Policy</em>
 </p>
+
+✔️ Allows:
+- Describe EC2  
+- List resources  
+
+❌ Denies:
+- Start / Stop instances  
 
 ---
 
-### 🧑‍💼 Task 2: Add Users to Groups
+### Step 6: Analyze S3-Support Policy
 
-| User   | Group         | Permissions |
-|--------|--------------|------------|
-| user-1 | S3-Support   | Read-only S3 |
-| user-2 | EC2-Support  | Read-only EC2 |
-| user-3 | EC2-Admin    | Start/Stop EC2 |
+- Policy: `AmazonS3ReadOnlyAccess`
 
-#### Steps:
+✔️ Allows:
+- Get objects  
+- List buckets  
 
-- Add `user-1` → **S3-Support**
-- Add `user-2` → **EC2-Support**
-- Add `user-3` → **EC2-Admin**
+---
+
+### Step 7: Analyze EC2-Admin Policy
+
+- Inline policy
+
+✔️ Allows:
+- Describe EC2  
+- Start / Stop instances  
+
+---
+
+## 🧑‍💼 Task 2: Add Users to Groups
+
+### 🎯 Scenario
+
+| User   | Group         | Role |
+|--------|--------------|------|
+| user-1 | S3-Support   | S3 Support |
+| user-2 | EC2-Support  | EC2 Support |
+| user-3 | EC2-Admin    | EC2 Admin |
+
+---
+
+### Step 1: Add user-1
+
+- Go to **S3-Support**
+- Users tab → Add users  
+- Select `user-1`
 
 <p align="center">
   <img src="./screenshots/add-users.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 6: Adding Users to IAM Groups</em>
+  <em>Figure 5: Add user-1 to S3-Support</em>
 </p>
-
-✅ Verify each group has 1 user assigned
 
 ---
 
-### 🔐 Task 3: Test User Access
+### Step 2: Add user-2
 
-#### 🔹 Test user-1 (S3 Support)
+- Assign to **EC2-Support**
 
-- Login using IAM Sign-in URL  
-- Access **S3 → ✅ Allowed**
+---
+
+### Step 3: Add user-3
+
+- Assign to **EC2-Admin**
+
+---
+
+### Step 4: Verification
+
+- Each group must contain **1 user**
+
+---
+
+## 🔐 Task 3: Test User Access
+
+### Step 1: Get Sign-in URL
+
+- Go to **IAM Dashboard**
+- Copy login URL
+
+---
+
+### Step 2: Open Incognito Window
+
+- Chrome → New Incognito  
+- Firefox → Private Window  
+
+---
+
+## 🧪 Test user-1
+
+Login:
+- user-1 / Lab-Password1  
+
+---
+
+### S3 Access
 
 <p align="center">
   <img src="./screenshots/s3-access.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 7: User-1 accessing Amazon S3</em>
+  <em>Figure 6: user-1 S3 Access</em>
 </p>
 
-- Access **EC2 → ❌ Denied**
+✔️ Allowed  
+
+---
+
+### EC2 Access
 
 <p align="center">
   <img src="./screenshots/ec2-denied.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 8: User-1 denied access to EC2</em>
+  <em>Figure 7: user-1 EC2 Denied</em>
 </p>
+
+❌ Not authorized  
 
 ---
 
-#### 🔹 Test user-2 (EC2 Support)
+## 🧪 Test user-2
 
-- Access **EC2 → 👁️ Read-only allowed**
+Login:
+- user-2 / Lab-Password2  
+
+---
+
+### EC2 Read Only
 
 <p align="center">
   <img src="./screenshots/ec2-readonly.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 9: User-2 EC2 Read-Only Access</em>
+  <em>Figure 8: user-2 EC2 ReadOnly</em>
 </p>
 
-- Try stopping instance → ❌ Denied  
+---
+
+### Stop Instance
 
 <p align="center">
   <img src="./screenshots/stop-denied.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 10: User-2 cannot stop EC2 instance</em>
+  <em>Figure 9: Stop Instance Denied</em>
 </p>
 
-- Access **S3 → ❌ Denied**
+❌ Denied  
 
 ---
 
-#### 🔹 Test user-3 (EC2 Admin)
+### S3 Access
 
-- Access EC2  
-- Start/Stop instance → ✅ Allowed  
+❌ No access  
+
+---
+
+## 🧪 Test user-3
+
+Login:
+- user-3 / Lab-Password3  
+
+---
+
+### EC2 Full Access
 
 <p align="center">
   <img src="./screenshots/ec2-admin.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 11: User-3 managing EC2 instance</em>
+  <em>Figure 10: EC2 Admin Access</em>
 </p>
+
+✔️ Can Stop Instance  
+
+---
+
+## 📤 Submitting the Lab
+
+- Click **Submit**
+- Wait a few minutes  
+- Check **Grades**
+
+📌 Tip:
+- Retry submission if needed  
+
+---
+
+## 🧾 Conclusion
+
+You have successfully:
+
+- Explored IAM Users & Groups  
+- Analyzed IAM Policies  
+- Implemented RBAC (Role-Based Access Control)  
+- Tested real access scenarios  
+- Understood permission boundaries  
 
 ---
 
 ## 🔐 Security Best Practices
 
-- Apply **Least Privilege Principle**  
-- Use **Groups instead of individual permissions**  
-- Enable **MFA for all users**  
-- Avoid using root account  
-- Use **roles for temporary access**  
+- Use Least Privilege  
+- Use Groups for permissions  
+- Enable MFA  
+- Avoid root account usage  
 
 ---
 
-## ⚠️ Common Issues
+## 📌 Status
 
-- ❌ Access denied → Check IAM policies  
-- ❌ Cannot see EC2 → Check selected Region  
-- ❌ Login issues → Verify credentials  
-
----
-
-## 📸 Screenshots
-
-All screenshots are stored in:
+✅ Completed
