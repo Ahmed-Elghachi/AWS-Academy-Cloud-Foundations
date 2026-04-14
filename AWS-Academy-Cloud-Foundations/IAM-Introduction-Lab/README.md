@@ -117,6 +117,12 @@ IAM allows you to:
 - Groups → ❌ None  
 - Security Credentials → ✅ Password  
 
+<p align="center">
+  <img src="./screenshots/user1-details.png" width="700"/>
+</p>
+<p align="center">
+  <em>Figure X: IAM user-1 details (Permissions, Groups, Security Credentials)</em>
+</p>
 ---
 
 ### Step 4: Explore Groups
