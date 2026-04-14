@@ -126,9 +126,9 @@ IAM allows you to:
 ---
 
 ### Step 4: Explore Groups
-- Go to **User Groups**
+- Go to **User Groups** from the left navigation pane  
 
-Groups:
+Groups available:
 - EC2-Admin  
 - EC2-Support  
 - S3-Support  
@@ -140,42 +140,109 @@ Groups:
   <em>Figure 4: IAM Groups Overview</em>
 </p>
 
+📌 These groups are pre-created to simulate real-world role-based access control.
+
 ---
 
 ### Step 5: Analyze EC2-Support Policy
-- Policy: `AmazonEC2ReadOnlyAccess`
+- Select **EC2-Support** group  
+- Open **Permissions** tab  
+- Policy: `AmazonEC2ReadOnlyAccess`  
 
 <p align="center">
-  <img src="./screenshots/iam-policies.png" width="700"/>
+  <img src="./screenshots/ec2-support-permissions.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 5: EC2 ReadOnly Policy</em>
+  <em>Figure 5: EC2-Support Permissions</em>
 </p>
 
-✔️ Allows:
-- Describe instances  
-- View resources  
+<p align="center">
+  <img src="./screenshots/ec2-policy-details.png" width="700"/>
+</p>
+<p align="center">
+  <em>Figure 6: EC2 ReadOnly Policy Details</em>
+</p>
 
-❌ Cannot:
-- Start / Stop instances  
+📌 **Explanation:**
+- This is an **AWS Managed Policy**
+- Automatically maintained by AWS
+- Applied to multiple users/groups
+
+✔️ **Allows:**
+- Describe EC2 instances  
+- List resources  
+- View CloudWatch metrics  
+- View Auto Scaling  
+
+❌ **Cannot:**
+- Start instances  
+- Stop instances  
+- Modify EC2 resources  
+
+👉 Used for **Support / Monitoring roles**
 
 ---
 
 ### Step 6: Analyze S3-Support Policy
-- Policy: `AmazonS3ReadOnlyAccess`
+- Select **S3-Support** group  
+- Open **Permissions** tab  
+- Policy: `AmazonS3ReadOnlyAccess`  
 
-✔️ Allows:
-- List buckets  
-- Read objects  
+<p align="center">
+  <img src="./screenshots/s3-support-permissions.png" width="700"/>
+</p>
+<p align="center">
+  <em>Figure 7: S3-Support Permissions</em>
+</p>
+
+<p align="center">
+  <img src="./screenshots/s3-policy-details.png" width="700"/>
+</p>
+<p align="center">
+  <em>Figure 8: S3 ReadOnly Policy Details</em>
+</p>
+
+✔️ **Allows:**
+- List S3 buckets  
+- Read (Get) objects  
+
+❌ **Cannot:**
+- Upload files  
+- Delete objects  
+- Modify buckets  
+
+👉 Used for **Storage support teams**
 
 ---
 
 ### Step 7: Analyze EC2-Admin Policy
-- Inline Policy  
+- Select **EC2-Admin** group  
+- Open **Permissions** tab  
 
-✔️ Allows:
-- Start / Stop instances  
-- Full EC2 control  
+<p align="center">
+  <img src="./screenshots/ec2-admin-permissions.png" width="700"/>
+</p>
+<p align="center">
+  <em>Figure 9: EC2-Admin Permissions</em>
+</p>
+
+📌 **Important:**
+- Uses an **Inline Policy** (not managed)
+- Specific to this group only
+
+<p align="center">
+  <img src="./screenshots/ec2-admin-policy.png" width="700"/>
+</p>
+<p align="center">
+  <em>Figure 10: EC2 Admin Inline Policy</em>
+</p>
+
+✔️ **Allows:**
+- Describe instances  
+- Start instances  
+- Stop instances  
+
+👉 Used for **EC2 Administrators**
 
 ---
 
@@ -188,6 +255,11 @@ Groups:
 | user-1 | S3-Support   | Read-only S3 |
 | user-2 | EC2-Support  | Read-only EC2 |
 | user-3 | EC2-Admin    | Start/Stop EC2 |
+
+📌 This scenario demonstrates:
+
+- **Role-Based Access Control (RBAC)**  
+- **Least Privilege Principle**  
 
 ---
 
