@@ -62,25 +62,30 @@ In this lab, you will:
 ### 🔍 Task 1: Explore Users and Groups
 
 - Navigate to IAM Dashboard  
+
+📸 **IAM Dashboard**
+![IAM Dashboard](./screenshots/iam-dashboard.png)
+
 - View existing users:
   - `user-1`
   - `user-2`
   - `user-3`
 
-- Check:
-  - Permissions → No permissions assigned  
-  - Groups → No group membership  
-  - Security Credentials → Console password  
+📸 **IAM Users**
+![IAM Users](./screenshots/iam-users.png)
 
 - Explore IAM Groups:
   - `EC2-Admin`
   - `EC2-Support`
   - `S3-Support`
 
+📸 **IAM Groups**
+![IAM Groups](./screenshots/iam-groups.png)
+
 - Analyze attached policies:
-  - `AmazonEC2ReadOnlyAccess`
-  - `AmazonS3ReadOnlyAccess`
-  - Inline policy (EC2-Admin)
+
+📸 **Policy Details**
+![IAM Policies](./screenshots/iam-policies.png)
 
 ---
 
@@ -98,7 +103,8 @@ In this lab, you will:
 - Add `user-2` → **EC2-Support**
 - Add `user-3` → **EC2-Admin**
 
-✅ Verify each group has 1 user assigned
+📸 **Add Users to Groups**
+![Add Users](./screenshots/add-users.png)
 
 ---
 
@@ -106,24 +112,38 @@ In this lab, you will:
 
 #### 🔹 Test user-1 (S3 Support)
 
-- Login using IAM Sign-in URL  
 - Access **S3 → ✅ Allowed**  
+
+📸 **S3 Access**
+![S3 Access](./screenshots/s3-access.png)
+
 - Access **EC2 → ❌ Denied**
+
+📸 **EC2 Denied**
+![EC2 Denied](./screenshots/ec2-denied.png)
 
 ---
 
 #### 🔹 Test user-2 (EC2 Support)
 
-- Access **EC2 → 👁️ Read-only allowed**  
+- Access **EC2 → 👁️ Read-only allowed**
+
+📸 **EC2 Read Only**
+![EC2 Read Only](./screenshots/ec2-readonly.png)
+
 - Try stopping instance → ❌ Denied  
-- Access **S3 → ❌ Denied**
+
+📸 **Stop Instance Denied**
+![Stop Denied](./screenshots/stop-denied.png)
 
 ---
 
 #### 🔹 Test user-3 (EC2 Admin)
 
-- Access EC2  
 - Start/Stop instance → ✅ Allowed  
+
+📸 **EC2 Admin Access**
+![EC2 Admin](./screenshots/ec2-admin.png)
 
 ---
 
@@ -145,31 +165,6 @@ In this lab, you will:
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshots Structure
 
-- IAM Dashboard  
-- Users & Groups  
-- Policy details  
-- User login tests  
-- EC2/S3 access results  
-
----
-
-## 📚 What I Learned
-
-- How IAM manages access in AWS  
-- Difference between Users, Groups, and Roles  
-- How policies control permissions  
-- Real-world implementation of access control  
-
----
-
-## 🚀 Next Step
-
-➡️ Continue with: **🌐 VPC Web Server Lab**
-
----
-
-## 📌 Status
-
-✅ Completed
+Make sure your repo contains:
