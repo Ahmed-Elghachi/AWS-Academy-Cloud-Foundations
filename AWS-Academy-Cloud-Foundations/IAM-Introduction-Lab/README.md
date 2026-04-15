@@ -195,6 +195,7 @@ Groups available:
   <em>Figure 6: EC2 ReadOnly Policy (JSON View)</em>
 </p>
 ---
+
 📌 **Explanation:**
 - This is an **AWS Managed Policy**
 - Automatically maintained by AWS
