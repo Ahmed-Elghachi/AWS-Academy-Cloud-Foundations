@@ -121,7 +121,7 @@ IAM allows you to:
   <img src="./screenshots/user1-details.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure X: IAM user-1 details (Permissions, Groups, Security Credentials)</em>
+  <em>Figure 4: IAM user-1 details (Permissions, Groups, Security Credentials)</em>
 </p>
 ---
 
@@ -137,7 +137,7 @@ Groups available:
   <img src="./screenshots/iam-groups.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 4: IAM Groups Overview</em>
+  <em>Figure 5: IAM Groups Overview</em>
 </p>
 
 📌 These groups are pre-created to simulate real-world role-based access control.
@@ -153,7 +153,7 @@ Groups available:
   <img src="./screenshots/ec2-support-permissions.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 5: EC2-Support Permissions</em>
+  <em>Figure 6: EC2-Support Permissions</em>
 </p>
 
 
@@ -192,7 +192,7 @@ Groups available:
 }
 ```
 <p align="center">
-  <em>Figure 6: EC2 ReadOnly Policy (JSON View)</em>
+  <em>Figure 7: EC2 ReadOnly Policy (JSON View)</em>
 </p>
 ---
 
@@ -224,6 +224,9 @@ Groups available:
 <p align="center">
   <img src="./screenshots/s3-support-permissions.png" width="700"/>
 </p>
+<p align="center">
+  <em>Figure 8: S3-Support Permissions</em>
+</p>
 
 ```json
 {
@@ -244,15 +247,12 @@ Groups available:
 }
 
 ```
-<p align="center">
-  <em>Figure 7: S3-Support Permissions</em>
-</p>
 
 <p align="center">
   <img src="./screenshots/s3-policy-details.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 8: S3 ReadOnly Policy Details</em>
+  <em>Figure 9: EC2 ReadOnly Policy (JSON View)</em>
 </p>
 
 ✔️ **Allows:**
@@ -276,7 +276,7 @@ Groups available:
   <img src="./screenshots/ec2-admin-permissions.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 9: EC2-Admin Permissions</em>
+  <em>Figure 10: EC2-Admin Permissions</em>
 </p>
 
 📌 **Important:**
@@ -286,8 +286,28 @@ Groups available:
 <p align="center">
   <img src="./screenshots/ec2-admin-policy.png" width="700"/>
 </p>
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "ec2:Describe*",
+                "ec2:StartInstances",
+                "ec2:StopInstances"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+
+```json
+
 <p align="center">
-  <em>Figure 10: EC2 Admin Inline Policy</em>
+  <em>Figure 11: EC2 Admin Inline Policy</em>
 </p>
 
 ✔️ **Allows:**
