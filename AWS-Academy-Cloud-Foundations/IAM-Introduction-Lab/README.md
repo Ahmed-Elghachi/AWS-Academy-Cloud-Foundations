@@ -162,23 +162,38 @@ Groups available:
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ec2:Describe*",
-        "elasticloadbalancing:Describe*",
-        "cloudwatch:ListMetrics",
-        "cloudwatch:GetMetricStatistics",
-        "cloudwatch:Describe*",
-        "autoscaling:Describe*"
-      ],
-      "Resource": "*"
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*",
+                "ec2:GetSecurityGroupsForVpc"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "elasticloadbalancing:Describe*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:ListMetrics",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "autoscaling:Describe*",
+            "Resource": "*"
+        }
+    ]
 }
-
+```json
 ---
 📌 **Explanation:**
 - This is an **AWS Managed Policy**
