@@ -155,7 +155,7 @@ Groups available:
 <p align="center">
   <em>Figure 5: EC2-Support Permissions</em>
 </p>
----
+
 <p align="center">
   <em>Figure 6: EC2 ReadOnly Policy (JSON View)</em>
 </p>
@@ -193,7 +193,7 @@ Groups available:
         }
     ]
 }
----
+```
 ---
 📌 **Explanation:**
 - This is an **AWS Managed Policy**
