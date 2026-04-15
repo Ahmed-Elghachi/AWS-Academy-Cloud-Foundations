@@ -157,11 +157,27 @@ Groups available:
 </p>
 
 <p align="center">
-  <img src="./screenshots/ec2-policy-details.png" width="700"/>
+  <em>Figure 6: EC2 ReadOnly Policy (JSON View)</em>
 </p>
-<p align="center">
-  <em>Figure 6: EC2 ReadOnly Policy Details</em>
-</p>
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:Describe*",
+        "elasticloadbalancing:Describe*",
+        "cloudwatch:ListMetrics",
+        "cloudwatch:GetMetricStatistics",
+        "cloudwatch:Describe*",
+        "autoscaling:Describe*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
 
 📌 **Explanation:**
 - This is an **AWS Managed Policy**
