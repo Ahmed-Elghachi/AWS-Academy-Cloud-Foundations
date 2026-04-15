@@ -160,7 +160,6 @@ Groups available:
   <em>Figure 6: EC2 ReadOnly Policy (JSON View)</em>
 </p>
 
-```json
 {
     "Version": "2012-10-17",
     "Statement": [
