@@ -281,9 +281,6 @@ Groups available:
 - Uses an **Inline Policy** (not managed)
 - Specific to this group only
 
-<p align="center">
-  <img src="./screenshots/ec2-admin-policy.png" width="700"/>
-</p>
 ```json
 {
     "Version": "2012-10-17",
@@ -302,7 +299,7 @@ Groups available:
     ]
 }
 
-```json
+```
 
 <p align="center">
   <em>Figure 11: EC2-Admin Inline Policy (JSON View)</em>
@@ -342,7 +339,7 @@ Groups available:
   <img src="./screenshots/add-users.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 6: Add user-1 to S3-Support</em>
+  <em>Figure 12: Add user-1 to S3-Support</em>
 </p>
 
 ---
@@ -384,7 +381,7 @@ Login:
   <img src="./screenshots/s3-access.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 7: user-1 accessing S3</em>
+  <em>Figure 13: user-1 accessing S3</em>
 </p>
 
 ✔️ Allowed  
@@ -397,7 +394,7 @@ Login:
   <img src="./screenshots/ec2-denied.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 8: user-1 denied EC2 access</em>
+  <em>Figure 14: user-1 denied EC2 access</em>
 </p>
 
 ❌ Denied  
@@ -415,7 +412,7 @@ Login:
   <img src="./screenshots/ec2-readonly.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 9: user-2 EC2 ReadOnly</em>
+  <em>Figure 15: user-2 EC2 ReadOnly</em>
 </p>
 
 ---
@@ -426,7 +423,7 @@ Login:
   <img src="./screenshots/stop-denied.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 10: Stop instance denied</em>
+  <em>Figure 16: Stop instance denied</em>
 </p>
 
 ---
@@ -447,7 +444,7 @@ Login:
   <img src="./screenshots/ec2-admin.png" width="700"/>
 </p>
 <p align="center">
-  <em>Figure 11: EC2 Admin full access</em>
+  <em>Figure 17: EC2 Admin full access</em>
 </p>
 
 ✔️ Allowed to stop instance  
