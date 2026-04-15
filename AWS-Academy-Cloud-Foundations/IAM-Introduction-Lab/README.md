@@ -194,7 +194,6 @@ Groups available:
     ]
 }
 
-
 ---
 📌 **Explanation:**
 - This is an **AWS Managed Policy**
