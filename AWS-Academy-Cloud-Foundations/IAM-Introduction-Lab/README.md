@@ -373,7 +373,7 @@ Groups available:
 ## 🧪 Test user-1
 
 Login:
-- user-1 / Lab-Password1  
+- user-1 / Lab-Password1 
 
 ### S3 Access
 
