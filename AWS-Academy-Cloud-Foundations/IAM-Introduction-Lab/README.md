@@ -224,6 +224,26 @@ Groups available:
 <p align="center">
   <img src="./screenshots/s3-support-permissions.png" width="700"/>
 </p>
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*",
+                "s3:Describe*",
+                "s3-object-lambda:Get*",
+                "s3-object-lambda:List*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+```
 <p align="center">
   <em>Figure 7: S3-Support Permissions</em>
 </p>
