@@ -193,7 +193,8 @@ Groups available:
         }
     ]
 }
-```json
+
+
 ---
 📌 **Explanation:**
 - This is an **AWS Managed Policy**
