@@ -248,11 +248,9 @@ Groups available:
 
 ```
 
+
 <p align="center">
-  <img src="./screenshots/s3-policy-details.png" width="700"/>
-</p>
-<p align="center">
-  <em>Figure 9: EC2 ReadOnly Policy (JSON View)</em>
+  <em>Figure 9: S3 ReadOnly Policy (JSON View)</em>
 </p>
 
 ✔️ **Allows:**
@@ -307,7 +305,7 @@ Groups available:
 ```json
 
 <p align="center">
-  <em>Figure 11: EC2 Admin Inline Policy</em>
+  <em>Figure 11: EC2-Admin Inline Policy (JSON View)</em>
 </p>
 
 ✔️ **Allows:**
