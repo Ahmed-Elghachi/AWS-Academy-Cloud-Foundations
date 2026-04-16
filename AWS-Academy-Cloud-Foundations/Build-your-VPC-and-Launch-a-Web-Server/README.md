@@ -34,36 +34,78 @@ You will create a custom virtual network with public and private subnets, config
 
 # 🌐 Task 1: Create Your VPC
 
-## Configuration
+---
 
-- VPC Name: `lab-vpc`
-- CIDR Block: `10.0.0.0/16`
-- Availability Zones: `1`
-- Public Subnet: `10.0.0.0/24`
-- Private Subnet: `10.0.1.0/24`
+## 🏗️ VPC Configuration
 
-### Components created automatically:
+In this step, we create the main network infrastructure using AWS VPC Wizard (**VPC and more** option).
 
-- Internet Gateway (IGW)
-- NAT Gateway
-- Route Tables
+### 🔧 Configuration Details
+
+| Parameter | Value |
+|----------|------|
+| VPC Name | `lab-vpc` |
+| CIDR Block | `10.0.0.0/16` |
+| Availability Zones | 1 |
+| Public Subnet | `10.0.0.0/24` |
+| Private Subnet | `10.0.1.0/24` |
 
 ---
 
-## 📸 Screenshot
+## ⚙️ Automatically Created Components
+
+When selecting **"VPC and more"**, AWS automatically provisions the following components:
+
+### 🌍 Internet Gateway (IGW)
+- Enables communication between VPC and Internet  
+- Attached automatically to the VPC  
+
+### 🔐 NAT Gateway
+- Allows instances in **private subnet** to access Internet  
+- Prevents direct inbound access (security layer)  
+
+### 🔀 Route Tables
+- **Public Route Table** → routes traffic to Internet Gateway  
+- **Private Route Table** → routes traffic to NAT Gateway  
+
+---
+
+## 📸 Screenshot – VPC Creation Configuration
 
 <p align="center">
   <img src="./screenshots/create-vpc.png" width="750"/>
 </p>
 
+<p align="center">
+  <em>Figure 1: Creating VPC (lab-vpc) with public and private subnets</em>
+</p>
+
 ---
 
-## 🧠 Explanation
+## 🧠 Detailed Explanation
 
-- VPC = isolated AWS network  
-- Public subnet = internet access  
-- Private subnet = secure internal resources  
-- NAT Gateway = outbound internet access  
+- The CIDR block `10.0.0.0/16` provides a large IP range (65,536 addresses)  
+- Public subnet (`10.0.0.0/24`) is used for resources exposed to the Internet  
+- Private subnet (`10.0.1.0/24`) is used for secure internal resources  
+- Internet Gateway allows direct Internet access  
+- NAT Gateway ensures **secure outbound Internet access** from private subnet  
+
+---
+
+## ✅ Result
+
+After creation, AWS automatically builds:
+
+- ✔ VPC (`lab-vpc`)
+- ✔ 1 Public Subnet
+- ✔ 1 Private Subnet
+- ✔ Internet Gateway
+- ✔ NAT Gateway
+- ✔ Route Tables
+
+👉 The network is now ready for deploying resources (EC2)
+
+---  
 
 ---
 
