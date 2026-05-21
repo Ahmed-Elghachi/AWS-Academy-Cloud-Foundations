@@ -491,7 +491,7 @@ You should see:
 </p>
 
 <p align="center">
-  <em>Figure 23: Apache Web Server Running Successfully</em>
+  <em>Figure 14: Apache Web Server Running Successfully</em>
 </p>
 
 ---
@@ -517,6 +517,6 @@ The deployed infrastructure contains:
 </p>
 
 <p align="center">
-  <em>Figure 24: Final AWS Architecture</em>
+  <em>Figure 15: Final AWS Architecture</em>
 </p>
 
