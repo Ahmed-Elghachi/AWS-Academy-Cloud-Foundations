@@ -89,7 +89,7 @@ Each lab is designed to reinforce theoretical concepts with practical implementa
 
 - 🔐 [IAM Introduction Lab](./IAM-Introduction-Lab)
 - 🌐 [Build your VPC and Launch a Web Server](./Build-your-VPC-and-Launch-a-Web-Server)
-- 🖥️ EC2 Instance Setup Lab  
+- 🖥️ [Introduction to Amazon EC2 ](./Introduction-to-Amazon-EC2)
 - 📦 EBS Volume Management Lab  
 - 🗄️ RDS Database Deployment Lab  
 - ⚖️ Auto Scaling & Load Balancer Lab  
