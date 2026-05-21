@@ -292,21 +292,37 @@ Associate:
 
 ---
 
-# 📌 EC2 Configuration
+# 📌 Description
 
-- Instance Name: `Web Server 1`
-- AMI: Amazon Linux 2023
-- Instance Type: t2.micro
-- Key Pair: vockey
+In this task, you will launch an Amazon EC2 instance inside your new VPC and configure it as a Web Server.
+
+The EC2 instance will host a web application accessible through the Internet.
 
 ---
 
-# 🌐 Network Settings
+# ⚙️ Step 1 — Open EC2 Console
 
-- VPC: `lab-vpc`
-- Subnet: `lab-subnet-public2`
-- Auto Public IP: Enabled
-- Security Group: Web Security Group
+- Open AWS Management Console
+- Search for EC2
+- Open EC2 Dashboard
+
+---
+
+# EC2 Dashboard
+
+<p align="center">
+  <img src="./screenshots/ec2-dashboard.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 12: AWS EC2 Dashboard</em>
+</p>
+
+---
+
+# ⚙️ Step 2 — Launch Instance
+
+- Click Launch Instance
 
 ---
 
@@ -317,12 +333,213 @@ Associate:
 </p>
 
 <p align="center">
-  <em>Figure 12: Launch EC2 Instance Configuration</em>
+  <em>Figure 13: Launch EC2 Instance Wizard</em>
 </p>
 
 ---
 
+# ⚙️ Step 3 — Configure Instance Name
+
+Set the instance name:
+
+- `Web Server 1`
+
+AWS automatically creates a tag:
+
+| Key | Value |
+|---|---|
+| Name | Web Server 1 |
+
+---
+
+# Instance Name Configuration
+
+<p align="center">
+  <img src="./screenshots/ec2-name.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 14: EC2 Instance Name Configuration</em>
+</p>
+
+---
+
+# ⚙️ Step 4 — Select Amazon Machine Image (AMI)
+
+Choose:
+
+- Amazon Linux
+- Amazon Linux 2023 AMI
+
+The AMI defines the operating system that runs on the EC2 instance.
+
+---
+
+# Amazon Linux AMI
+
+<p align="center">
+  <img src="./screenshots/ami-selection.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 15: Amazon Linux 2023 AMI Selection</em>
+</p>
+
+---
+
+# ⚙️ Step 5 — Choose Instance Type
+
+Select:
+
+- `t2.micro`
+
+The instance type defines:
+- CPU
+- RAM
+- Network performance
+
+---
+
+# Instance Type Selection
+
+<p align="center">
+  <img src="./screenshots/instance-type.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 16: EC2 Instance Type Selection</em>
+</p>
+
+---
+
+# ⚙️ Step 6 — Select Key Pair
+
+Choose the existing key pair:
+
+- `vockey`
+
+The key pair allows secure SSH access to the instance.
+
+---
+
+# Key Pair Configuration
+
+<p align="center">
+  <img src="./screenshots/keypair.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 17: EC2 Key Pair Configuration</em>
+</p>
+
+---
+
+# ⚙️ Step 7 — Configure Network Settings
+
+Click Edit under Network Settings and configure:
+
+| Parameter | Value |
+|---|---|
+| Network | `lab-vpc` |
+| Subnet | `lab-subnet-public2` |
+| Auto-assign Public IP | Enable |
+
+---
+
+# 🌐 Configure Security Group
+
+Under Firewall (Security Groups):
+
+- Select existing security group
+- Choose `Web Security Group`
+
+This security group allows HTTP access to the server.
+
+---
+
+# Network Configuration
+
+<p align="center">
+  <img src="./screenshots/network-settings.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 18: EC2 Network and Security Group Configuration</em>
+</p>
+
+---
+
+# ⚙️ Step 8 — Configure Storage
+
+Keep the default storage configuration:
+
+| Volume Type | Size |
+|---|---|
+| gp3 SSD | 8 GiB |
+
+This volume stores:
+- Amazon Linux Operating System
+- Web Server Files
+
+---
+
+# Storage Configuration
+
+<p align="center">
+  <img src="./screenshots/storage.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 19: EC2 Storage Configuration</em>
+</p>
+
+---
+
+# ⚙️ Step 9 — Configure User Data Script
+
+Expand:
+- Advanced Details
+
+Paste the following script into the User Data section.
+
+---
+
 # ⚙️ User Data Script
+
+```bash
+#!/bin/bash
+
+# Install Apache Web Server and PHP
+dnf install -y httpd wget php mariadb105-server
+
+# Download Lab Files
+wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-100-ACCLFO-2/2-lab2-vpc/s3/lab-app.zip
+
+# Extract Application Files
+unzip lab-app.zip -d /var/www/html/
+
+# Enable Apache Web Server
+chkconfig httpd on
+
+# Start Apache Service
+service httpd start
+```
+
+---
+
+# 🧠 Script Explanation
+
+| Command | Description |
+|---|---|
+| dnf install | Install Apache, PHP and MariaDB |
+| wget | Download lab web application |
+| unzip | Extract web files |
+| chkconfig | Enable Apache service |
+| service httpd start | Start Apache server |
+
+---
+
+# User Data Configuration
 
 ```bash
 #!/bin/bash
@@ -341,3 +558,110 @@ systemctl enable httpd
 
 # Start Apache
 systemctl start httpd
+
+---
+
+# ⚙️ Step 10 — Launch the Instance
+
+- Click Launch Instance
+
+AWS will deploy the EC2 instance.
+
+You should see:
+- Success Message
+
+---
+
+# EC2 Launch Success
+
+<p align="center">
+  <img src="./screenshots/ec2-success.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 21: EC2 Instance Successfully Launched</em>
+</p>
+
+---
+
+# ⚙️ Step 11 — Verify Instance Status
+
+- Click View all instances
+- Wait until:
+
+```bash
+2/2 checks passed
+```
+
+Refresh the page every 30 seconds if necessary.
+
+---
+
+# EC2 Running Status
+
+<p align="center">
+  <img src="./screenshots/ec2-running.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 22: EC2 Instance Running Successfully</em>
+</p>
+
+---
+
+# ⚙️ Step 12 — Access the Web Server
+
+- Select Web Server 1
+- Copy the Public IPv4 DNS
+
+Example:
+
+```bash
+http://ec2-xx-xx-xx-xx.compute-1.amazonaws.com
+```
+
+Open the address in a web browser.
+
+You should see:
+- AWS Logo
+- Instance Metadata
+- Running Web Application
+
+---
+
+# Web Server Output
+
+<p align="center">
+  <img src="./screenshots/web-server.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 23: Apache Web Server Running Successfully</em>
+</p>
+
+---
+
+# 🧠 Final Result
+
+The deployed infrastructure contains:
+
+✅ VPC  
+✅ Public & Private Subnets  
+✅ Route Tables  
+✅ Internet Gateway  
+✅ NAT Gateway  
+✅ Security Group  
+✅ EC2 Web Server  
+
+---
+
+# 🏗️ Final Architecture
+
+<p align="center">
+  <img src="./screenshots/final-architecture.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 24: Final AWS Architecture</em>
+</p>
+
