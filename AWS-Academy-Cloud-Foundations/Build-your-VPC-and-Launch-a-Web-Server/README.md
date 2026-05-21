@@ -325,19 +325,6 @@ The EC2 instance will host a web application accessible through the Internet.
 - Click Launch Instance
 
 ---
-
-# Launch EC2 Instance
-
-<p align="center">
-  <img src="./screenshots/ec2-launch.png" width="750"/>
-</p>
-
-<p align="center">
-  <em>Figure 13: Launch EC2 Instance Wizard</em>
-</p>
-
----
-
 # ⚙️ Step 3 — Configure Instance Name
 
 Set the instance name:
@@ -352,18 +339,6 @@ AWS automatically creates a tag:
 
 ---
 
-# Instance Name Configuration
-
-<p align="center">
-  <img src="./screenshots/ec2-name.png" width="750"/>
-</p>
-
-<p align="center">
-  <em>Figure 14: EC2 Instance Name Configuration</em>
-</p>
-
----
-
 # ⚙️ Step 4 — Select Amazon Machine Image (AMI)
 
 Choose:
@@ -374,19 +349,6 @@ Choose:
 The AMI defines the operating system that runs on the EC2 instance.
 
 ---
-
-# Amazon Linux AMI
-
-<p align="center">
-  <img src="./screenshots/ami-selection.png" width="750"/>
-</p>
-
-<p align="center">
-  <em>Figure 15: Amazon Linux 2023 AMI Selection</em>
-</p>
-
----
-
 # ⚙️ Step 5 — Choose Instance Type
 
 Select:
@@ -400,18 +362,6 @@ The instance type defines:
 
 ---
 
-# Instance Type Selection
-
-<p align="center">
-  <img src="./screenshots/instance-type.png" width="750"/>
-</p>
-
-<p align="center">
-  <em>Figure 16: EC2 Instance Type Selection</em>
-</p>
-
----
-
 # ⚙️ Step 6 — Select Key Pair
 
 Choose the existing key pair:
@@ -419,18 +369,6 @@ Choose the existing key pair:
 - `vockey`
 
 The key pair allows secure SSH access to the instance.
-
----
-
-# Key Pair Configuration
-
-<p align="center">
-  <img src="./screenshots/keypair.png" width="750"/>
-</p>
-
-<p align="center">
-  <em>Figure 17: EC2 Key Pair Configuration</em>
-</p>
 
 ---
 
@@ -457,18 +395,6 @@ This security group allows HTTP access to the server.
 
 ---
 
-# Network Configuration
-
-<p align="center">
-  <img src="./screenshots/network-settings.png" width="750"/>
-</p>
-
-<p align="center">
-  <em>Figure 18: EC2 Network and Security Group Configuration</em>
-</p>
-
----
-
 # ⚙️ Step 8 — Configure Storage
 
 Keep the default storage configuration:
@@ -482,19 +408,6 @@ This volume stores:
 - Web Server Files
 
 ---
-
-# Storage Configuration
-
-<p align="center">
-  <img src="./screenshots/storage.png" width="750"/>
-</p>
-
-<p align="center">
-  <em>Figure 19: EC2 Storage Configuration</em>
-</p>
-
----
-
 # ⚙️ Step 9 — Configure User Data Script
 
 Expand:
@@ -546,7 +459,7 @@ service httpd start
 </p>
 
 <p align="center">
-  <em>Figure 22: EC2 Instance Running Successfully</em>
+  <em>Figure 13: EC2 Instance Running Successfully</em>
 </p>
 
 ---
