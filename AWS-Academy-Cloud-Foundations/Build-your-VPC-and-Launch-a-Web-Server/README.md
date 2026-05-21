@@ -65,7 +65,7 @@ The wizard automatically creates:
 
 ---
 
-# 📸 Screenshot 1 — AWS VPC Dashboard
+# AWS VPC Dashboard
 
 <p align="center">
   <img src="./screenshots/vpc-dashboard.png" width="750"/>
@@ -84,7 +84,7 @@ The wizard automatically creates:
 
 ---
 
-# 📸 Screenshot 2 — Create VPC Wizard
+# Create VPC Wizard
 
 <p align="center">
   <img src="./screenshots/create-vpc-wizard.png" width="750"/>
@@ -123,7 +123,7 @@ The wizard automatically creates:
 
 ---
 
-# 📸 Screenshot 3 — VPC Configuration
+# VPC Configuration
 
 <p align="center">
   <img src="./screenshots/vpc-configuration.png" width="750"/>
@@ -135,7 +135,7 @@ The wizard automatically creates:
 
 ---
 
-# 📸 Screenshot 4 — VPC Resource Preview
+# VPC Resource Preview
 
 <p align="center">
   <img src="./screenshots/vpc-preview.png" width="750"/>
@@ -154,7 +154,7 @@ The wizard automatically creates:
 
 ---
 
-# 📸 Screenshot 5 — VPC Successfully Created
+# 📸  5 — VPC Successfully Created
 
 <p align="center">
   <img src="./screenshots/vpc-created.png" width="750"/>
@@ -174,7 +174,7 @@ Verify:
 
 ---
 
-# 📸 Screenshot 6 — Subnets
+# Subnets
 
 <p align="center">
   <img src="./screenshots/subnets.png" width="750"/>
@@ -194,7 +194,7 @@ Verify:
 
 ---
 
-# 📸 Screenshot 7 — Route Tables
+# Route Tables
 
 <p align="center">
   <img src="./screenshots/route-tables.png" width="750"/>
@@ -226,7 +226,7 @@ Verify:
 
 ---
 
-# 📸 Screenshot 8 — Additional Subnets
+# Additional Subnets
 
 <p align="center">
   <img src="./screenshots/additional-subnets.png" width="750"/>
@@ -246,7 +246,7 @@ Associate:
 
 ---
 
-# 📸 Screenshot 9 — Route Table Associations
+# Route Table Associations
 
 <p align="center">
   <img src="./screenshots/route-associations.png" width="750"/>
@@ -276,7 +276,7 @@ Associate:
 
 ---
 
-# 📸 Screenshot 10 — Security Group
+# Security Group
 
 <p align="center">
   <img src="./screenshots/security-group.png" width="750"/>
@@ -310,7 +310,7 @@ Associate:
 
 ---
 
-# 📸 Screenshot 11 — Launch EC2 Instance
+# Launch EC2 Instance
 
 <p align="center">
   <img src="./screenshots/ec2-launch.png" width="750"/>
