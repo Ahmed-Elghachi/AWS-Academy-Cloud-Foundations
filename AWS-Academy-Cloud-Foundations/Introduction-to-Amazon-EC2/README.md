@@ -601,7 +601,7 @@ Detailed monitoring: updates every 1 minute
   <img src="./screenshots/cloudwatch-monitoring.png" width="750"/>
 </p>
 <p align="center">
-  <em>Figure 2: Amazon CloudWatch Monitoring Metrics</em>
+  <em>Figure 5: Amazon CloudWatch Monitoring Metrics</em>
 </p>
 
 ---
@@ -618,7 +618,7 @@ This provides better visibility and detailed metric analysis.
   <img src="./screenshots/enlarged-monitoring.png" width="750"/>
 </p>
 <p align="center">
-  <em>Figure 3: Enlarged CloudWatch Metric Graph</em>
+  <em>Figure 6: Enlarged CloudWatch Metric Graph</em>
 </p>
 
 ---
