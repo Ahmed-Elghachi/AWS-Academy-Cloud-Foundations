@@ -351,18 +351,6 @@ You should now see:
 
 ---
 
-# Launch Success
-
-<p align="center">
-  <img src="./screenshots/launch-success.png" width="750"/>
-</p>
-
-<p align="center">
-  <em>Figure 10: EC2 Instance Launch Success Message</em>
-</p>
-
----
-
 # ⚙️ Step 12 — View All Instances
 
 After the instance is launched:
@@ -394,7 +382,7 @@ The Details section contains important information about:
 </p>
 
 <p align="center">
-  <em>Figure 11: Amazon EC2 Instance Details</em>
+  <em>Figure 2: Amazon EC2 Instance Details</em>
 </p>
 
 ---
