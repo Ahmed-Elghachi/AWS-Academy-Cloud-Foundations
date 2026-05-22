@@ -103,31 +103,7 @@ You will safely stop your EC2 instance after disabling stop protection.
 
 ---
 
-# 🧠 Technologies Used
 
-- Amazon EC2
-- Amazon EBS
-- Amazon VPC
-- Security Groups
-- Amazon CloudWatch
-- AWS Service Quotas
-- Apache Web Server
-
----
-
-# 🎓 Skills Acquired
-
-By completing this lab, you will gain practical experience in:
-
-- Cloud Infrastructure Management
-- AWS Compute Services
-- EC2 Deployment
-- Network Security
-- Server Monitoring
-- Resource Scaling
-- Cloud Administration
-
----
 # ⏱️ Duration
 
 Approximate time: 35 minutes
