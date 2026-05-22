@@ -128,7 +128,7 @@ The EC2 instance will host a simple web application accessible from the internet
 # ⚙️ Step 1 — Open EC2 Console
 
 - Open AWS Management Console
-- Choose **Services**
+- Choose ▦ **Services**
 - Select **Compute**
 - Choose **EC2**
 
