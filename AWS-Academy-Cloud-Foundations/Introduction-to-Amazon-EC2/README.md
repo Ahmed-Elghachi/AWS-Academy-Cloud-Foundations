@@ -2,24 +2,34 @@
 
 ---
 
-# 📌 Lab Overview
-
-This lab provides a practical introduction to Amazon EC2.
-
-You will learn how to:
-- Launch an EC2 instance
-- Configure security groups
-- Enable termination protection
-- Enable stop protection
-- Monitor EC2 instances
-- Resize EC2 instances
-- Modify EBS volumes
-- Explore EC2 limits
-- Access a web server
+# 📌 Lab Overview and Objectives
 
 ---
 
-# 🧠 Architecture
+# 🧠 Introduction
+
+This lab provides a practical introduction to launching, managing, resizing, and monitoring an Amazon EC2 instance.
+
+Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
+
+Amazon EC2 provides a simple web service interface that allows users to:
+- Launch virtual servers quickly
+- Configure computing resources easily
+- Scale infrastructure dynamically
+- Manage cloud servers efficiently
+
+Amazon EC2 gives you complete control over your computing resources and allows you to run applications on Amazon’s highly reliable cloud infrastructure.
+
+One of the major advantages of Amazon EC2 is its flexibility:
+- You can increase or decrease resources at any time
+- You only pay for the resources you use
+- You can deploy applications within minutes
+
+Amazon EC2 also helps developers build highly available and fault-tolerant applications while reducing infrastructure costs.
+
+---
+
+# 🧠 Architectural Diagram
 
 <p align="center">
   <img src="./screenshots/ec2-architecture.png" width="850"/>
@@ -31,21 +41,93 @@ You will learn how to:
 
 ---
 
-# 🎯 Objectives
+# 🎯 Lab Objectives
 
 After completing this lab, you will be able to:
 
-- Launch a Web Server with termination protection
-- Monitor EC2 instances
-- Configure security groups
-- Allow HTTP access
-- Resize an EC2 instance
-- Modify EBS volumes
-- Test stop protection
-- Stop and start EC2 instances
+---
+
+## ✅ Launch a Web Server with Termination Protection Enabled
+
+You will create and configure an Amazon EC2 instance running a web server while enabling termination protection to prevent accidental deletion.
 
 ---
 
+## ✅ Monitor Your EC2 Instance
+
+You will use monitoring tools such as:
+- Status Checks
+- CloudWatch Metrics
+- System Logs
+- Instance Screenshots
+
+to observe the health and performance of your instance.
+
+---
+
+## ✅ Modify the Security Group to Allow HTTP Access
+
+You will configure inbound security group rules to allow web traffic on port 80 (HTTP) so users can access the hosted web application.
+
+---
+
+## ✅ Resize Your Amazon EC2 Instance
+
+You will:
+- Change the EC2 instance type
+- Increase computing resources
+- Modify the EBS storage volume size
+
+This demonstrates how AWS supports scalability.
+
+---
+
+## ✅ Enable and Test Stop Protection
+
+You will enable stop protection to prevent accidental stopping of your EC2 instance and test how this protection works.
+
+---
+
+## ✅ Explore Amazon EC2 Limits
+
+You will use AWS Service Quotas to explore:
+- EC2 instance limits
+- Running instance quotas
+- Resource limitations per region
+
+---
+
+## ✅ Stop Your EC2 Instance
+
+You will safely stop your EC2 instance after disabling stop protection.
+
+---
+
+# 🧠 Technologies Used
+
+- Amazon EC2
+- Amazon EBS
+- Amazon VPC
+- Security Groups
+- Amazon CloudWatch
+- AWS Service Quotas
+- Apache Web Server
+
+---
+
+# 🎓 Skills Acquired
+
+By completing this lab, you will gain practical experience in:
+
+- Cloud Infrastructure Management
+- AWS Compute Services
+- EC2 Deployment
+- Network Security
+- Server Monitoring
+- Resource Scaling
+- Cloud Administration
+
+---
 # ⏱️ Duration
 
 Approximate time: 35 minutes
