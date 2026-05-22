@@ -522,3 +522,221 @@ You successfully created and configured an Amazon EC2 instance with:
 The environment is now ready for the next tasks in the lab.
 
 ---
+
+# 🌐 Task 2 — Monitor Your Instance
+
+## 📌 Description
+
+Monitoring is an important part of maintaining the:
+
+- Reliability
+- Availability
+- Performance
+
+of your Amazon EC2 instances and AWS infrastructure.
+
+In this task, you will explore several EC2 monitoring and troubleshooting tools.
+
+---
+
+## ⚙️ Step 1 — Open Status Checks
+
+Select:
+
+- `Web Server` instance
+
+Choose:
+
+- **Status checks** tab
+
+### 🧠 Status Checks Explanation
+
+Amazon EC2 automatically performs health checks on every running instance.
+
+There are two types of status checks:
+
+| Status Check | Description |
+|--------------|-------------|
+| System Reachability | Verifies AWS infrastructure and hardware |
+| Instance Reachability | Verifies the operating system and instance responsiveness |
+
+Both checks must pass successfully.
+
+<p align="center">
+  <img src="./screenshots/status-checks.png" width="750"/>
+</p>
+<p align="center">
+  <em>Figure 1: EC2 Instance Status Checks</em>
+</p>
+
+---
+
+## ✅ Expected Result
+
+Verify:
+
+| Parameter | Status |
+|-----------|--------|
+| System Reachability | Passed |
+| Instance Reachability | Passed |
+
+This confirms that:
+- The AWS infrastructure is healthy
+- The operating system is functioning correctly
+
+---
+
+## ⚙️ Step 2 — Open Monitoring Tab
+
+Choose:
+
+- **Monitoring** tab
+
+### 🧠 Monitoring Explanation
+
+The Monitoring tab displays metrics collected by Amazon CloudWatch.
+
+Examples of metrics:
+- CPU Utilization
+- Network Traffic
+- Disk Operations
+- Status Check Metrics
+
+Basic monitoring: updates every 5 minutes  
+Detailed monitoring: updates every 1 minute
+
+<p align="center">
+  <img src="./screenshots/cloudwatch-monitoring.png" width="750"/>
+</p>
+<p align="center">
+  <em>Figure 2: Amazon CloudWatch Monitoring Metrics</em>
+</p>
+
+---
+
+## 📌 Expand Monitoring Graphs
+
+To enlarge a graph:
+- Click the three dots icon
+- Select **Enlarge**
+
+This provides better visibility and detailed metric analysis.
+
+<p align="center">
+  <img src="./screenshots/enlarged-monitoring.png" width="750"/>
+</p>
+<p align="center">
+  <em>Figure 3: Enlarged CloudWatch Metric Graph</em>
+</p>
+
+---
+
+## ⚙️ Step 3 — Open System Log
+
+Choose:
+- **Actions**
+- **Monitor and troubleshoot**
+- **Get system log**
+
+### 🧠 System Log Explanation
+
+The System Log displays:
+- Console boot messages
+- Kernel logs
+- Service startup logs
+- Error messages
+
+This tool is extremely useful for:
+- Troubleshooting boot problems
+- Diagnosing service failures
+- Investigating unreachable instances
+
+---
+
+## 📌 Verify Apache Installation
+
+Scroll through the log output and verify:
+- HTTP package installation
+- Apache service startup
+
+These actions were executed automatically by the User Data script.
+
+<p align="center">
+  <img src="./screenshots/system-log.png" width="750"/>
+</p>
+<p align="center">
+  <em>Figure 4: EC2 System Log Output</em>
+</p>
+
+---
+
+## ⚙️ Step 4 — Get Instance Screenshot
+
+Choose:
+- **Actions**
+- **Monitor and troubleshoot**
+- **Get instance screenshot**
+
+### 🧠 Instance Screenshot Explanation
+
+The instance screenshot displays the console screen of the virtual machine.
+
+This feature is useful when:
+- SSH access fails
+- RDP access fails
+- The operating system crashes
+- The server becomes unresponsive
+
+It helps administrators visually diagnose problems.
+
+<p align="center">
+  <img src="./screenshots/instance-screenshot.png" width="750"/>
+</p>
+<p align="center">
+  <em>Figure 5: Amazon EC2 Console Screenshot</em>
+</p>
+
+---
+
+## 🧠 Screenshot Analysis
+
+The screenshot shows:
+- Amazon Linux 2023 boot screen
+- Linux kernel version
+- System service messages
+- Console login prompt
+
+This confirms that:
+- The operating system booted successfully
+- The EC2 instance is operational
+
+---
+
+## ✅ Result
+
+You successfully explored multiple EC2 monitoring tools:
+
+- Status Checks
+- CloudWatch Metrics
+- System Logs
+- Instance Screenshot
+
+These tools are essential for:
+- Troubleshooting
+- Monitoring performance
+- Diagnosing failures
+- Maintaining AWS infrastructure
+
+---
+
+## 🎓 Conclusion
+
+Amazon EC2 monitoring capabilities provide administrators with powerful tools to:
+- Observe instance health
+- Detect failures
+- Analyze performance
+- Troubleshoot operating system problems
+
+Monitoring is a critical component of cloud infrastructure management and cybersecurity operations.
+
+---
