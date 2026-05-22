@@ -562,14 +562,6 @@ There are two types of status checks:
 
 Both checks must pass successfully.
 
-<p align="center">
-  <img src="./screenshots/status-checks.png" width="750"/>
-</p>
-<p align="center">
-  <em>Figure 1: EC2 Instance Status Checks</em>
-</p>
-
----
 
 ## ✅ Expected Result
 
