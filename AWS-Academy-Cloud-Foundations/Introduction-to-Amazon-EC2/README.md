@@ -409,20 +409,6 @@ This public DNS can later be used to:
 
 ---
 
-# 📌 Resize the Console Window
-
-To display more instance information:
-
-- Drag the window divider upward
-
-This provides a larger view of:
-- Instance details
-- Monitoring information
-- Networking configuration
-- Security settings
-
----
-
 # ⚙️ Step 13 — Wait for Instance Initialization
 
 At first, the EC2 instance will appear in the following states:
@@ -464,7 +450,7 @@ The EC2 instance becomes available for:
 </p>
 
 <p align="center">
-  <em>Figure 12: EC2 Instance Running Successfully</em>
+  <em>Figure 3: EC2 Instance Running Successfully</em>
 </p>
 
 ---
