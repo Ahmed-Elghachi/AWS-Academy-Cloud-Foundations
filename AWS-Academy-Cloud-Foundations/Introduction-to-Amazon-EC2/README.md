@@ -490,14 +490,13 @@ When both checks pass:
 </p>
 
 <p align="center">
-  <em>Figure 13: EC2 Status Checks Successfully Passed</em>
+  <em>Figure 4: EC2 Status Checks Successfully Passed</em>
 </p>
 
 ---
 
 # 🎉 Congratulations!
 
-You have successfully launched your first Amazon EC2 instance.
 
 The instance is now:
 
