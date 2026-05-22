@@ -333,3 +333,218 @@ systemctl enable httpd
 systemctl start httpd
 
 echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html
+---
+---
+
+# ⚙️ Step 11 — Launch the Instance
+
+At the bottom of the **Summary** panel:
+
+- Click **Launch instance**
+
+AWS will begin provisioning the EC2 instance.
+
+You should now see:
+
+- ✅ Success message
+
+---
+
+# Launch Success
+
+<p align="center">
+  <img src="./screenshots/launch-success.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 10: EC2 Instance Launch Success Message</em>
+</p>
+
+---
+
+# ⚙️ Step 12 — View All Instances
+
+After the instance is launched:
+
+- Choose **View all instances**
+
+In the **Instances** list:
+
+- Select `Web Server`
+
+Review the information displayed in the **Details** tab.
+
+The Details section contains important information about:
+
+- Instance type
+- Security settings
+- Network configuration
+- Public IPv4 address
+- Public IPv4 DNS
+- Instance ID
+- VPC and Subnet information
+
+---
+
+# EC2 Instance Details
+
+<p align="center">
+  <img src="./screenshots/ec2-details.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 11: Amazon EC2 Instance Details</em>
+</p>
+
+---
+
+# 🧠 Public IPv4 DNS Explanation
+
+The instance is automatically assigned a:
+
+- Public IPv4 DNS
+
+This DNS name allows communication with the EC2 instance directly from the Internet.
+
+Example:
+
+```text
+ec2-44-xxx-xxx-xxx.compute-1.amazonaws.com
+```
+
+This public DNS can later be used to:
+
+- Access web applications
+- Connect using SSH
+- Test hosted services
+
+---
+
+# 📌 Resize the Console Window
+
+To display more instance information:
+
+- Drag the window divider upward
+
+This provides a larger view of:
+- Instance details
+- Monitoring information
+- Networking configuration
+- Security settings
+
+---
+
+# ⚙️ Step 13 — Wait for Instance Initialization
+
+At first, the EC2 instance will appear in the following states:
+
+| State | Description |
+|---|---|
+| Pending | AWS is launching the instance |
+| Initializing | Operating system and services are starting |
+| Running | The instance is fully operational |
+
+---
+
+# 🧠 Instance State Explanation
+
+### 🔹 Pending
+AWS allocates:
+- Virtual hardware
+- Storage
+- Networking resources
+
+### 🔹 Initializing
+Amazon Linux boots and:
+- Executes the User Data script
+- Starts Apache Web Server
+- Configures services
+
+### 🔹 Running
+The EC2 instance becomes available for:
+- Monitoring
+- Remote access
+- Web hosting
+
+---
+
+# Running EC2 Instance
+
+<p align="center">
+  <img src="./screenshots/ec2-running.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 12: EC2 Instance Running Successfully</em>
+</p>
+
+---
+
+# ✅ Verification
+
+Wait until the instance displays the following status:
+
+| Parameter | Status |
+|---|---|
+| Instance State | Running |
+| Status Checks | 2/2 checks passed |
+
+---
+
+# 🧠 Status Checks Explanation
+
+Amazon EC2 automatically performs two health checks:
+
+| Status Check | Description |
+|---|---|
+| System Status Check | Verifies AWS physical infrastructure |
+| Instance Status Check | Verifies the operating system inside the instance |
+
+When both checks pass:
+
+- The AWS infrastructure is healthy
+- The operating system is functioning correctly
+- The instance is ready for use
+
+---
+
+# Status Checks Passed
+
+<p align="center">
+  <img src="./screenshots/status-checks-passed.png" width="750"/>
+</p>
+
+<p align="center">
+  <em>Figure 13: EC2 Status Checks Successfully Passed</em>
+</p>
+
+---
+
+# 🎉 Congratulations!
+
+You have successfully launched your first Amazon EC2 instance.
+
+The instance is now:
+
+✅ Running successfully  
+✅ Connected to the network  
+✅ Protected against accidental termination  
+✅ Configured with Apache Web Server  
+✅ Ready for monitoring and web access  
+
+---
+
+# ✅ Result
+
+You successfully created and configured an Amazon EC2 instance with:
+
+- Amazon Linux 2023
+- Apache Web Server
+- User Data Automation
+- Public IPv4 Connectivity
+- Security Group Configuration
+- Termination Protection
+
+The environment is now ready for the next tasks in the lab.
+
+---
