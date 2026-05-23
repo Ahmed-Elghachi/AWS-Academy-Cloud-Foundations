@@ -1108,3 +1108,404 @@ You learned how to:
 Security Groups are one of the most important security mechanisms in AWS cloud environments.
 
 ---
+# ⚙️ Task 4 — Resize Your EC2 Instance: Instance Type and EBS Volume
+
+---
+
+# 📌 Description
+
+As your application requirements grow, you may need to increase the performance and storage capacity of your Amazon EC2 instance.
+
+In this task, you will:
+
+- Stop the EC2 instance
+- Change the instance type
+- Enable Stop Protection
+- Resize the EBS root volume
+- Restart the EC2 instance
+
+This demonstrates how AWS provides scalable and flexible cloud infrastructure.
+
+---
+
+# 🛑 Step 1 — Stop Your EC2 Instance
+
+Before resizing an EC2 instance, the instance must first be stopped.
+
+When an instance is stopped:
+
+- The operating system shuts down safely
+- EC2 compute charges stop
+- Amazon EBS storage charges continue
+
+---
+
+## 📌 Procedure
+
+- Open the EC2 Management Console
+- In the left navigation pane, choose:
+  - **Instances**
+- Select:
+  - `Web Server`
+- Open:
+  - **Instance state**
+- Choose:
+  - **Stop instance**
+
+---
+
+# Stop EC2 Instance
+
+<p align="center">
+  <img src="./screenshots/stop-instance.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: Stopping the EC2 Web Server Instance</em>
+</p>
+
+---
+
+# ⚠️ Confirm Stop Action
+
+Choose:
+
+- **Stop**
+
+The EC2 instance will perform a normal operating system shutdown.
+
+---
+
+# Instance State — Stopped
+
+<p align="center">
+  <img src="./screenshots/instance-stopped.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: EC2 Instance Successfully Stopped</em>
+</p>
+
+---
+
+# ✅ Verification
+
+Wait until:
+
+| Parameter | Status |
+|---|---|
+| Instance State | Stopped |
+
+---
+
+# 🔄 Step 2 — Change the Instance Type
+
+After the instance is stopped, you can modify the virtual hardware configuration.
+
+---
+
+## 📌 Procedure
+
+- Select:
+  - `Web Server`
+- Open:
+  - **Actions**
+  - **Instance settings**
+  - **Change instance type**
+
+Configure:
+
+| Parameter | Value |
+|---|---|
+| Instance Type | t2.small |
+
+Choose:
+
+- **Apply**
+
+---
+
+# Change Instance Type
+
+<p align="center">
+  <img src="./screenshots/change-instance-type.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 3: Changing the EC2 Instance Type</em>
+</p>
+
+---
+
+# 🧠 Instance Type Explanation
+
+### 🔹 t2.micro
+
+- 1 vCPU
+- 1 GiB RAM
+
+### 🔹 t2.small
+
+- 1 vCPU
+- 2 GiB RAM
+
+The upgraded instance provides:
+
+- More available memory
+- Better application performance
+- Improved scalability
+
+> NOTE: Some AWS Academy labs restrict the available instance types.
+
+---
+
+# 🔐 Step 3 — Enable Stop Protection
+
+Stop Protection prevents the EC2 instance from being stopped accidentally.
+
+---
+
+## 📌 Procedure
+
+- Select:
+  - `Web Server`
+- Open:
+  - **Actions**
+  - **Instance settings**
+  - **Change stop protection**
+
+Configure:
+
+- ✅ Enable Stop Protection
+
+Choose:
+
+- **Save**
+
+---
+
+# Enable Stop Protection
+
+<p align="center">
+  <img src="./screenshots/enable-stop-protection.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 4: Enabling EC2 Stop Protection</em>
+</p>
+
+---
+
+# 🧠 Stop Protection Explanation
+
+When Stop Protection is enabled:
+
+- AWS blocks stop requests
+- The instance cannot be stopped accidentally
+
+This feature is useful for:
+
+- Production servers
+- Critical applications
+- Important infrastructure services
+
+---
+
+# 📌 Important Note
+
+When an EC2 instance is stopped and restarted:
+
+- It may be migrated to another physical AWS host
+- A new Public IPv4 address is usually assigned
+- The Private IPv4 address remains unchanged
+- Attached EBS volumes and stored data are retained
+
+---
+
+# 💾 Step 4 — Resize the Amazon EBS Volume
+
+Amazon EC2 instances use Amazon Elastic Block Store (EBS) for persistent storage.
+
+The current root volume size is:
+
+- `8 GiB`
+
+You will increase it to:
+
+- `10 GiB`
+
+---
+
+## 📌 Procedure
+
+- Keep the `Web Server` instance selected
+- Open the:
+  - **Storage** tab
+- Select the:
+  - **Volume ID**
+- Select the volume checkbox
+
+Open:
+
+- **Actions**
+- **Modify volume**
+
+---
+
+# Open EBS Volume
+
+<p align="center">
+  <img src="./screenshots/open-ebs-volume.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 5: Accessing the Root EBS Volume</em>
+</p>
+
+---
+
+# 📌 Modify Volume Size
+
+Configure:
+
+| Parameter | Value |
+|---|---|
+| Size | 10 GiB |
+
+Choose:
+
+- **Modify**
+
+Then confirm by selecting:
+
+- **Modify** again
+
+---
+
+# Modify EBS Volume
+
+<p align="center">
+  <img src="./screenshots/modify-ebs-volume.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 6: Increasing the EBS Volume Size</em>
+</p>
+
+---
+
+# 🧠 EBS Volume Explanation
+
+Amazon EBS provides:
+
+- Persistent block storage
+- High durability
+- Flexible storage resizing
+
+The EBS root volume stores:
+
+- Operating system files
+- Installed applications
+- Web server data
+- System logs
+
+Increasing the volume size allows:
+
+- More storage capacity
+- Better scalability
+- Additional space for applications and logs
+
+> NOTE: This lab may restrict EBS volumes larger than 10 GiB.
+
+---
+
+# ▶️ Step 5 — Start the Resized Instance
+
+You will now restart the EC2 instance with the upgraded resources.
+
+---
+
+## 📌 Procedure
+
+- In the left navigation pane, choose:
+  - **Instances**
+- Select:
+  - `Web Server`
+- Open:
+  - **Instance state**
+- Choose:
+  - **Start instance**
+
+---
+
+# Start EC2 Instance
+
+<p align="center">
+  <img src="./screenshots/start-instance.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 7: Starting the Resized EC2 Instance</em>
+</p>
+
+---
+
+# ✅ Verification
+
+Wait until:
+
+| Parameter | Status |
+|---|---|
+| Instance State | Running |
+| Status Checks | 2/2 checks passed |
+
+---
+
+# Resized EC2 Instance Running
+
+<p align="center">
+  <img src="./screenshots/resized-instance-running.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 8: Resized EC2 Instance Running Successfully</em>
+</p>
+
+---
+
+# 🧠 Summary
+
+In this task, you successfully:
+
+✅ Stopped the EC2 instance  
+✅ Changed the instance type from `t2.micro` to `t2.small`  
+✅ Enabled Stop Protection  
+✅ Increased the EBS root volume from `8 GiB` to `10 GiB`  
+✅ Restarted the EC2 instance successfully  
+
+---
+
+# 🎯 Result
+
+Your EC2 instance now provides:
+
+- More memory
+- Additional storage space
+- Better scalability
+- Improved performance
+- Additional protection against accidental shutdowns
+
+---
+
+# 🎓 Conclusion
+
+Amazon EC2 provides flexible scalability features that allow administrators to:
+
+- Resize compute resources dynamically
+- Increase storage capacity easily
+- Protect critical instances
+- Adapt infrastructure to changing workloads
+
+These capabilities are essential in cloud computing, DevOps, and cybersecurity environments.
+
+---
