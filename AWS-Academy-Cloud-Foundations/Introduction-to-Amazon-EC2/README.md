@@ -767,18 +767,6 @@ Choose:
 
 ---
 
-# EC2 Instance Details
-
-<p align="center">
-  <img src="./screenshots/ec2-details2.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>Figure 1: Amazon EC2 Instance Details</em>
-</p>
-
----
-
 # ⚙️ Step 2 — Copy Public IPv4 Address
 
 Copy:
@@ -798,7 +786,7 @@ The public IPv4 address allows internet communication with the EC2 instance.
 # Public IPv4 Address
 
 <p align="center">
-  <img src="./screenshots/public-ip-address.png" width="850"/>
+  <img src="./screenshots/ec2-details2.png" width="850"/>
 </p>
 
 <p align="center">
