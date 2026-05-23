@@ -735,7 +735,6 @@ Amazon EC2 monitoring capabilities provide administrators with powerful tools to
 Monitoring is a critical component of cloud infrastructure management and cybersecurity operations.
 
 ---
----
 # 🌐 Task 3 — Update Your Security Group and Access the Web Server
 
 ## 📌 Description
