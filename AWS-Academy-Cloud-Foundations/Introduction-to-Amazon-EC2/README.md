@@ -770,7 +770,7 @@ Choose:
 # EC2 Instance Details
 
 <p align="center">
-  <img src="./screenshots/ec2-details.png" width="850"/>
+  <img src="./screenshots/ec2-details2.png" width="850"/>
 </p>
 
 <p align="center">
