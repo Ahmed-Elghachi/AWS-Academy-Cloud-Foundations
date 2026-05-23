@@ -732,3 +732,389 @@ Amazon EC2 monitoring capabilities provide administrators with powerful tools to
 Monitoring is a critical component of cloud infrastructure management and cybersecurity operations.
 
 ---
+---
+# 🌐 Task 3 — Update Your Security Group and Access the Web Server
+
+## 📌 Description
+
+When you launched the EC2 instance, you configured a User Data script that:
+
+- Installed Apache Web Server
+- Started the HTTP service
+- Created a simple web page
+
+In this task, you will:
+
+- Access the EC2 web server
+- Configure the Security Group
+- Allow HTTP traffic on port 80
+
+---
+
+# ⚙️ Step 1 — Open EC2 Instance Details
+
+Ensure the instance:
+
+- `Web Server`
+
+is still selected.
+
+Choose:
+
+- **Details** tab
+
+---
+
+# EC2 Instance Details
+
+<p align="center">
+  <img src="./screenshots/ec2-details.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: Amazon EC2 Instance Details</em>
+</p>
+
+---
+
+# ⚙️ Step 2 — Copy Public IPv4 Address
+
+Copy:
+
+- Public IPv4 address
+
+Example:
+
+```text
+44.xxx.xxx.xxx
+```
+
+The public IPv4 address allows internet communication with the EC2 instance.
+
+---
+
+# Public IPv4 Address
+
+<p align="center">
+  <img src="./screenshots/public-ip-address.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: EC2 Public IPv4 Address</em>
+</p>
+
+---
+
+# ⚙️ Step 3 — Test Web Server Access
+
+Open:
+
+- A new browser tab
+
+Paste:
+
+- The copied Public IPv4 address
+
+Press:
+
+- **Enter**
+
+---
+
+# ❓ Question
+
+Are you able to access your web server?
+
+---
+
+# ❌ Result
+
+No, the web server is not accessible yet.
+
+---
+
+# 🧠 Why?
+
+The Security Group currently blocks:
+
+- Inbound HTTP traffic on port `80`
+
+Port `80` is used for:
+
+- HTTP web requests
+
+Since no inbound HTTP rule exists, the Security Group denies incoming browser requests.
+
+This demonstrates how AWS Security Groups function as virtual firewalls.
+
+---
+
+# Access Denied by Security Group
+
+<p align="center">
+  <img src="./screenshots/access-denied.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 3: HTTP Access Blocked by the Security Group</em>
+</p>
+
+---
+
+# 🧠 Security Group Firewall Explanation
+
+AWS Security Groups help protect EC2 instances by controlling:
+
+- Allowed inbound traffic
+- Allowed outbound traffic
+
+Currently:
+
+| Traffic Type | Status |
+|---|---|
+| HTTP (Port 80) | Blocked |
+| HTTPS (Port 443) | Blocked |
+| SSH (Port 22) | Removed |
+
+Because HTTP traffic is blocked:
+
+- The Apache web server cannot be reached from the internet
+
+---
+
+# ⚙️ Step 4 — Open Security Groups
+
+Keep the browser tab open and return to:
+
+- EC2 Console
+
+In the left navigation pane choose:
+
+- **Security Groups**
+
+---
+
+# Security Groups Menu
+
+<p align="center">
+  <img src="./screenshots/security-groups-menu.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 4: EC2 Security Groups Menu</em>
+</p>
+
+---
+
+# ⚙️ Step 5 — Select Web Server Security Group
+
+Select:
+
+- `Web Server security group`
+
+Choose:
+
+- **Inbound rules** tab
+
+Notice:
+
+- No inbound rules currently exist
+
+---
+
+# Empty Inbound Rules
+
+<p align="center">
+  <img src="./screenshots/security-group-empty.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 5: Empty Inbound Security Group Rules</em>
+</p>
+
+---
+
+# ⚙️ Step 6 — Add HTTP Rule
+
+Choose:
+
+- **Edit inbound rules**
+
+Then:
+
+- Select **Add rule**
+
+Configure the following:
+
+| Parameter | Value |
+|---|---|
+| Type | HTTP |
+| Protocol | TCP |
+| Port Range | 80 |
+| Source | Anywhere-IPv4 |
+
+Choose:
+
+- **Save rules**
+
+---
+
+# HTTP Inbound Rule Configuration
+
+<p align="center">
+  <img src="./screenshots/http-rule.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 6: Configuring HTTP Security Group Rule</em>
+</p>
+
+---
+
+# 🧠 HTTP Rule Explanation
+
+This rule allows:
+
+- Incoming web traffic on port 80
+
+Source:
+
+```text
+0.0.0.0/0
+```
+
+Meaning:
+
+- Any IPv4 address on the internet can access the web server
+
+This configuration makes the Apache website publicly accessible.
+
+---
+
+# 🧠 Security Group Analysis
+
+The Security Group now contains the following inbound rule:
+
+| Type | Protocol | Port | Source |
+|---|---|---|---|
+| HTTP | TCP | 80 | 0.0.0.0/0 |
+
+---
+
+# Security Group Rule Analysis
+
+<p align="center">
+  <img src="./screenshots/security-group-analysis.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 7: Security Group Allowing HTTP Traffic</em>
+</p>
+
+---
+
+# ⚙️ Step 7 — Refresh the Web Browser
+
+Return to:
+
+- The web browser tab previously opened
+
+Refresh the page.
+
+---
+
+# ✅ Web Server Accessible
+
+You should now see the following message:
+
+```html
+Hello From Your Web Server!
+```
+
+This confirms that:
+
+- Apache Web Server is running successfully
+- HTTP traffic is allowed through the Security Group
+- The EC2 instance is accessible from the internet
+
+---
+
+# Apache Web Server Output
+
+<p align="center">
+  <img src="./screenshots/web-server-output.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 8: Apache Web Server Successfully Accessible</em>
+</p>
+
+---
+
+# 🌐 HTTP Connectivity Flow
+
+The web request now follows this path:
+
+```text
+User Browser
+      ↓
+Internet
+      ↓
+AWS Security Group
+      ↓
+HTTP Port 80 Allowed
+      ↓
+Amazon EC2 Instance
+      ↓
+Apache Web Server
+      ↓
+Web Page Response
+```
+
+---
+
+# 📌 Important Security Note
+
+Allowing:
+
+```text
+0.0.0.0/0
+```
+
+provides public internet access.
+
+In production environments, administrators should:
+
+- Restrict unnecessary access
+- Use HTTPS instead of HTTP
+- Configure AWS WAF protections
+- Monitor traffic using CloudWatch and VPC Flow Logs
+
+---
+
+# ✅ Result
+
+You successfully:
+
+✅ Modified the Security Group  
+✅ Allowed inbound HTTP traffic on port 80  
+✅ Accessed the EC2 web server  
+✅ Verified Apache Web Server functionality  
+✅ Published a web application on AWS  
+
+---
+
+# 🎓 Conclusion
+
+This task demonstrated how AWS Security Groups function as virtual firewalls to protect EC2 instances.
+
+You learned how to:
+
+- Control inbound traffic
+- Allow HTTP access
+- Publish a web application securely
+- Verify internet connectivity to EC2 instances
+
+Security Groups are one of the most important security mechanisms in AWS cloud environments.
+
+---
