@@ -1154,18 +1154,6 @@ When an instance is stopped:
 
 ---
 
-# Stop EC2 Instance
-
-<p align="center">
-  <img src="./screenshots/stop-instance.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>Figure 1: Stopping the EC2 Web Server Instance</em>
-</p>
-
----
-
 # ⚠️ Confirm Stop Action
 
 Choose:
