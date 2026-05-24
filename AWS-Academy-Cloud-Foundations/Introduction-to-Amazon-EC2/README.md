@@ -1629,3 +1629,68 @@ AWS displays the following error message:
 Failed to stop the instance i-1234567xxx.
 The instance 'i-1234567xxx' may not be stopped.
 Modify its 'disableApiStop' instance attribute and try again.
+```
+
+# 🧭 Step 3 — Disable Stop Protection
+
+## 📌 Procedure
+
+- Select the `Web Server` instance
+- Open the:
+  - **Actions** menu
+- Choose:
+  - **Instance settings**
+  - **Change stop protection**
+
+---
+## 📌 Disable Stop Protection
+
+- Remove the check next to:
+  - ✅ Enable
+
+- Choose:
+  - **Save**
+---
+
+# 🧠 Explanation
+
+After disabling Stop Protection:
+
+- The EC2 instance can now be stopped normally
+- AWS will no longer block stop requests
+- Administrative stop operations are allowed again
+
+---
+
+# 🧭 Step 4 — Stop the EC2 Instance
+
+## 📌 Procedure
+
+- Select the:
+  - `Web Server` instance
+
+- Open the:
+  - **Instance state** menu
+
+- Choose:
+  - **Stop instance**
+
+---
+
+You have successfully:
+
+✅ Tested EC2 Stop Protection  
+✅ Disabled Stop Protection  
+✅ Stopped the EC2 instance successfully  
+
+---
+
+# 🧠 Task Summary
+
+| Feature | Purpose |
+|---|---|
+| Stop Protection | Prevent accidental shutdown |
+| Disable Stop Protection | Allow administrative stop actions |
+| Stop Instance | Safely shut down the EC2 virtual machine |
+
+---
