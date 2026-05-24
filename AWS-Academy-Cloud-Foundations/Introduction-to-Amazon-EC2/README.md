@@ -660,7 +660,7 @@ These actions were executed automatically by the User Data script.
 </p>
 
 <p align="center">
-  <em>Figure 5: EC2 Console Output Showing Apache Installation</em>
+  <em>Figure 7: EC2 Console Output Showing Apache Installation</em>
 </p>
 
 ---
@@ -688,7 +688,7 @@ It helps administrators visually diagnose problems.
   <img src="./screenshots/instance-screenshot.png" width="750"/>
 </p>
 <p align="center">
-  <em>Figure 5: Amazon EC2 Console Screenshot</em>
+  <em>Figure 8: Amazon EC2 Console Screenshot</em>
 </p>
 
 ---
@@ -790,7 +790,7 @@ The public IPv4 address allows internet communication with the EC2 instance.
 </p>
 
 <p align="center">
-  <em>Figure 2: EC2 Public IPv4 Address</em>
+  <em>Figure 9: EC2 Public IPv4 Address</em>
 </p>
 
 ---
@@ -846,7 +846,7 @@ This demonstrates how AWS Security Groups function as virtual firewalls.
 </p>
 
 <p align="center">
-  <em>Figure 3: HTTP Access Blocked by the Security Group</em>
+  <em>Figure 10: HTTP Access Blocked by the Security Group</em>
 </p>
 
 ---
@@ -891,7 +891,7 @@ In the left navigation pane choose:
 </p>
 
 <p align="center">
-  <em>Figure 4: EC2 Security Groups Menu</em>
+  <em>Figure 11: EC2 Security Groups Menu</em>
 </p>
 
 ---
@@ -919,7 +919,7 @@ Notice:
 </p>
 
 <p align="center">
-  <em>Figure 5: Empty Inbound Security Group Rules</em>
+  <em>Figure 12: Empty Inbound Security Group Rules</em>
 </p>
 
 ---
@@ -956,7 +956,7 @@ Choose:
 </p>
 
 <p align="center">
-  <em>Figure 6: Configuring HTTP Security Group Rule</em>
+  <em>Figure 13: Configuring HTTP Security Group Rule</em>
 </p>
 
 ---
@@ -998,7 +998,7 @@ The Security Group now contains the following inbound rule:
 </p>
 
 <p align="center">
-  <em>Figure 7: Security Group Allowing HTTP Traffic</em>
+  <em>Figure 14: Security Group Allowing HTTP Traffic</em>
 </p>
 
 ---
@@ -1036,7 +1036,7 @@ This confirms that:
 </p>
 
 <p align="center">
-  <em>Figure 8: Apache Web Server Successfully Accessible</em>
+  <em>Figure 15: Apache Web Server Successfully Accessible</em>
 </p>
 
 ---
@@ -1171,7 +1171,7 @@ The EC2 instance will perform a normal operating system shutdown.
 </p>
 
 <p align="center">
-  <em>Figure 2: EC2 Instance Successfully Stopped</em>
+  <em>Figure 16: EC2 Instance Successfully Stopped</em>
 </p>
 
 ---
@@ -1220,7 +1220,7 @@ Choose:
 </p>
 
 <p align="center">
-  <em>Figure 3: Changing the EC2 Instance Type</em>
+  <em>Figure 17: Changing the EC2 Instance Type</em>
 </p>
 
 ---
@@ -1279,7 +1279,7 @@ Choose:
 </p>
 
 <p align="center">
-  <em>Figure 4: Enabling EC2 Stop Protection</em>
+  <em>Figure 18: Enabling EC2 Stop Protection</em>
 </p>
 
 ---
@@ -1347,7 +1347,7 @@ Open:
 </p>
 
 <p align="center">
-  <em>Figure 5: Accessing the Root EBS Volume</em>
+  <em>Figure 19: Accessing the Root EBS Volume</em>
 </p>
 
 ---
@@ -1377,7 +1377,7 @@ Then confirm by selecting:
 </p>
 
 <p align="center">
-  <em>Figure 6: Increasing the EBS Volume Size</em>
+  <em>Figure 20: Increasing the EBS Volume Size</em>
 </p>
 
 ---
@@ -1433,7 +1433,7 @@ You will now restart the EC2 instance with the upgraded resources.
 </p>
 
 <p align="center">
-  <em>Figure 7: Starting the Resized EC2 Instance</em>
+  <em>Figure 21: Starting the Resized EC2 Instance</em>
 </p>
 
 ---
@@ -1456,7 +1456,7 @@ Wait until:
 </p>
 
 <p align="center">
-  <em>Figure 8: Resized EC2 Instance Running Successfully</em>
+  <em>Figure 22: Resized EC2 Instance Running Successfully</em>
 </p>
 
 ---
@@ -1537,7 +1537,7 @@ These limits help to:
 </p>
 
 <p align="center">
-  <em>Figure 1: AWS Service Quotas Dashboard</em>
+  <em>Figure 23: AWS Service Quotas Dashboard</em>
 </p>
 
 ---
@@ -1562,7 +1562,7 @@ These limits help to:
 </p>
 
 <p align="center">
-  <em>Figure 2: Selecting Amazon EC2 in Service Quotas</em>
+  <em>Figure 23: Selecting Amazon EC2 in Service Quotas</em>
 </p>
 
 ---
