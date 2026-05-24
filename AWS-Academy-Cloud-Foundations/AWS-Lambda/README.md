@@ -176,3 +176,100 @@ You successfully created the Lambda function:
 
 ```text
 myStopinator
+```
+---
+# ⏰ Task 2 — Configure the Lambda Trigger
+
+## 📌 Description
+
+In this task, you will configure an Amazon EventBridge rule to automatically trigger the AWS Lambda function every minute.
+
+The EventBridge trigger works like:
+
+- Linux cron jobs
+- Windows scheduled tasks
+
+This allows the Lambda function to execute automatically without managing a server.
+
+---
+
+# 🧠 Trigger Architecture
+
+<p align="center">
+  <img src="./screenshots/lambda-eventbridge-architecture.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: EventBridge Trigger Automatically Invoking the Lambda Function</em>
+</p>
+
+---
+
+# ⚙️ Step 1 — Open Lambda Function
+
+From the AWS Lambda console:
+
+- Select the function:
+  - `myStopinator`
+
+---
+
+# ⚙️ Step 2 — Add Trigger
+
+Inside the Lambda function page:
+
+- Choose **Add trigger**
+
+---
+
+# 🧠 Trigger Explanation
+
+A trigger is an AWS service or event source that automatically invokes a Lambda function.
+
+Common Lambda triggers include:
+
+| Trigger Type | Example |
+|---|---|
+| EventBridge | Scheduled execution |
+| S3 | File upload |
+| API Gateway | HTTP request |
+| CloudWatch Logs | Log events |
+| DynamoDB | Database changes |
+
+In this lab, EventBridge will trigger the Lambda function every minute.
+
+---
+
+# ⚙️ Step 3 — Select EventBridge
+
+Configure the trigger:
+
+| Parameter | Value |
+|---|---|
+| Trigger Type | EventBridge (CloudWatch Events) |
+| Rule | Create a new rule |
+| Rule Name | everyMinute |
+| Rule Type | Schedule expression |
+| Schedule Expression | rate(1 minute) |
+
+---
+
+# EventBridge Trigger Configuration
+
+<p align="center">
+  <img src="./screenshots/eventbridge-trigger.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: Configuring EventBridge Trigger for Lambda</em>
+</p>
+
+---
+
+# 🧠 Schedule Expression Explanation
+
+The expression:
+
+```bash
+rate(1 minute)
+```
