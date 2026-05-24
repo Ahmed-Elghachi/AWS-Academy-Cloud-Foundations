@@ -1,4 +1,4 @@
-# ⚡ AWS Activity — AWS Lambda Automation for Amazon EC2
+# ⚡ AWS Activity — AWS Lambda
 
 ---
 
