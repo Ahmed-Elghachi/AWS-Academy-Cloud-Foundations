@@ -1617,20 +1617,6 @@ In this task, you will:
 - In the **Instance state** menu, choose:
   - **Stop instance**
 
----
-
-# 📸 Attempt to Stop Instance
-
-<p align="center">
-  <img src="./screenshots/attempt-stop-instance.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>Figure 2: Attempting to Stop the Protected EC2 Instance</em>
-</p>
-
----
-
 # ⚠️ Stop Protection Error Message
 
 Choose:
