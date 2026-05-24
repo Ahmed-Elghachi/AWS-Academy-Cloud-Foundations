@@ -495,34 +495,6 @@ These metrics help administrators:
 
 ---
 
-# 📌 Expected Result
-
-After approximately one minute:
-
-✅ EventBridge triggers Lambda  
-✅ Lambda executes successfully  
-✅ EC2 instance automatically stops  
-
----
-
-# 🧠 Cybersecurity & Automation Perspective
-
-This automation demonstrates:
-
-- Serverless computing
-- Infrastructure automation
-- Cloud orchestration
-- Automated resource management
-
-AWS Lambda is widely used in cybersecurity for:
-
-- Incident response
-- Automated remediation
-- Log analysis
-- Threat detection workflows
-
----
-
 # ✅ Result
 
 You successfully configured:
