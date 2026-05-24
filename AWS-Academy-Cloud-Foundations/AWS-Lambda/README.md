@@ -193,18 +193,6 @@ This allows the Lambda function to execute automatically without managing a serv
 
 ---
 
-# 🧠 Trigger Architecture
-
-<p align="center">
-  <img src="./screenshots/lambda-eventbridge-architecture.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>Figure 1: EventBridge Trigger Automatically Invoking the Lambda Function</em>
-</p>
-
----
-
 # ⚙️ Step 1 — Open Lambda Function
 
 From the AWS Lambda console:
