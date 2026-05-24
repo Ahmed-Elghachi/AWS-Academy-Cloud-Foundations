@@ -392,7 +392,7 @@ instances = ['<REPLACE_WITH_INSTANCE_ID>']
 with:
 
 ```python
-instances = ['i-0abc123456789xyz0']
+instances = ['i-01e11a9eebc7c5b9b']
 ```
 
 Keep:
