@@ -253,11 +253,315 @@ Configure the trigger:
 </p>
 
 ---
+---
+# 🟧 Task 3 — Configure the Lambda Function
 
-# 🧠 Schedule Expression Explanation
+## 📌 Description
 
-The expression:
+In this task, you will configure the AWS Lambda function code that automatically stops an Amazon EC2 instance.
+
+The Lambda function uses:
+
+- Python 3.11
+- AWS SDK for Python (Boto3)
+- IAM permissions
+- Amazon EC2 API
+
+The function will execute automatically every minute using the EventBridge trigger configured previously.
+
+---
+
+# 🧠 Lambda Architecture
+
+<p align="center">
+  <img src="./screenshots/lambda-ec2-architecture.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: AWS Lambda Automatically Stopping an EC2 Instance</em>
+</p>
+
+---
+
+# ⚙️ Step 1 — Open the Lambda Code Editor
+
+Inside the Lambda console:
+
+- Select the function:
+  - `myStopinator`
+
+Choose:
+
+- **Code**
+- `lambda_function.py`
+
+This opens the built-in AWS Lambda code editor.
+
+---
+
+# Lambda Code Editor
+
+<p align="center">
+  <img src="./screenshots/lambda-code-editor.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: AWS Lambda Code Editor</em>
+</p>
+
+---
+
+# ⚙️ Step 2 — Replace the Existing Code
+
+Inside the **Code source** panel:
+
+- Delete the existing sample code
+- Copy and paste the following Python code:
+
+```python
+import boto3
+
+region = 'us-east-1'
+
+instances = ['i-1234567890abcdef0']
+
+ec2 = boto3.client('ec2', region_name=region)
+
+def lambda_handler(event, context):
+
+    ec2.stop_instances(InstanceIds=instances)
+
+    print('stopped your instances: ' + str(instances))
+```
+
+---
+
+# 🧠 Code Explanation
+
+| Code Section | Purpose |
+|---|---|
+| import boto3 | Imports AWS SDK for Python |
+| region | Defines the AWS region |
+| instances | Specifies EC2 instance ID |
+| boto3.client() | Connects to Amazon EC2 |
+| stop_instances() | Stops the EC2 instance |
+| print() | Displays execution log |
+
+---
+
+# ⚠️ Important Configuration Notes
+
+Replace:
+
+```python
+'us-east-1'
+```
+
+with your actual AWS Region.
+
+Examples:
+
+| Region Name | Region Code |
+|---|---|
+| US East (N. Virginia) | us-east-1 |
+| Europe (Paris) | eu-west-3 |
+| Europe (London) | eu-west-2 |
+
+---
+
+# 📌 Find Your EC2 Instance ID
+
+To retrieve the instance ID:
+
+1. Open the EC2 Console
+2. Choose **Instances**
+3. Locate:
+   - `instance1`
+4. Copy the Instance ID
+
+Example:
 
 ```bash
-rate(1 minute)
+i-0abc123456789xyz0
 ```
+
+---
+
+# EC2 Instance ID Example
+
+<p align="center">
+  <img src="./screenshots/ec2-instance-id.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 3: Copying the EC2 Instance ID</em>
+</p>
+
+---
+
+# ⚠️ Replace the Placeholder
+
+Replace:
+
+```python
+instances = ['<REPLACE_WITH_INSTANCE_ID>']
+```
+
+with:
+
+```python
+instances = ['i-0abc123456789xyz0']
+```
+
+Keep:
+
+- Single quotation marks `' '`
+- Square brackets `[ ]`
+
+---
+
+# 🧠 How the Lambda Function Works
+
+The execution flow:
+
+1. EventBridge triggers Lambda
+2. Lambda executes Python code
+3. Boto3 connects to EC2
+4. EC2 stop command is sent
+5. Target instance shuts down
+
+---
+
+# 🔄 Lambda Execution Flow
+
+```text
+⏰ EventBridge Trigger
+        ↓
+🟧 AWS Lambda Function
+        ↓
+🐍 Python Boto3 SDK
+        ↓
+🖥️ Amazon EC2 API
+        ↓
+🛑 Stop EC2 Instance
+```
+
+---
+
+# ⚙️ Step 3 — Save and Deploy the Function
+
+Choose:
+
+- **File**
+- **Save**
+
+Then choose:
+
+- **Deploy**
+
+AWS Lambda will deploy the updated code.
+
+---
+
+# Lambda Deployment Successful
+
+<p align="center">
+  <img src="./screenshots/lambda-deploy-success.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 4: Lambda Function Successfully Deployed</em>
+</p>
+
+---
+
+# ⚙️ Step 4 — Open the Monitoring Tab
+
+Choose:
+
+- **Monitor**
+
+The monitoring section displays:
+
+- Function invocations
+- Success rate
+- Error count
+- Execution duration
+
+---
+
+# Lambda Monitoring Dashboard
+
+<p align="center">
+  <img src="./screenshots/lambda-monitoring.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 5: AWS Lambda Monitoring Metrics</em>
+</p>
+
+---
+
+# 🧠 Monitoring Explanation
+
+AWS Lambda integrates with:
+
+- Amazon CloudWatch
+
+CloudWatch automatically records:
+
+| Metric | Description |
+|---|---|
+| Invocations | Number of executions |
+| Errors | Failed executions |
+| Duration | Execution time |
+| Success Rate | Successful executions |
+
+These metrics help administrators:
+
+- Troubleshoot failures
+- Analyze performance
+- Monitor automation activity
+
+---
+
+# 📌 Expected Result
+
+After approximately one minute:
+
+✅ EventBridge triggers Lambda  
+✅ Lambda executes successfully  
+✅ EC2 instance automatically stops  
+
+---
+
+# 🧠 Cybersecurity & Automation Perspective
+
+This automation demonstrates:
+
+- Serverless computing
+- Infrastructure automation
+- Cloud orchestration
+- Automated resource management
+
+AWS Lambda is widely used in cybersecurity for:
+
+- Incident response
+- Automated remediation
+- Log analysis
+- Threat detection workflows
+
+---
+
+# ✅ Result
+
+You successfully configured:
+
+✅ AWS Lambda Python function  
+✅ Boto3 EC2 automation  
+✅ Automatic EC2 shutdown workflow  
+✅ CloudWatch monitoring integration  
+
+The Lambda function is now fully operational and will automatically stop the EC2 instance every minute.
+
+---
