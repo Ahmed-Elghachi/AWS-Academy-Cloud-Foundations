@@ -42,6 +42,28 @@ After completing this lab, you will be able to:
 ✅ Explore AWS infrastructure resources  
 ✅ Understand Auto Scaling and Load Balancing  
 
+---
+
+# 🏗️ Elastic Beanstalk Architecture
+
+```text
+                🌐 Internet Users
+                        │
+                        ▼
+          ⚖️ Elastic Load Balancer (ELB)
+                        │
+        ┌───────────────┴───────────────┐
+        ▼                               ▼
+🖥️ EC2 Instance 1               🖥️ EC2 Instance 2
+   (Tomcat App)                    (Tomcat App)
+        │                               │
+        └───────────────┬───────────────┘
+                        ▼
+              📈 Auto Scaling Group
+                        │
+                        ▼
+                ☁️ Elastic Beanstalk
+```
 
 ---
 
@@ -86,6 +108,18 @@ wait a few moments.
 
 ---
 
+# 📸 Elastic Beanstalk Environment
+
+<p align="center">
+  <img src="./screenshots/elastic-beanstalk-environment.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: Elastic Beanstalk Environment Dashboard</em>
+</p>
+
+---
+
 # ⚙️ Step 3 — Open the Environment Dashboard
 
 Under:
@@ -110,6 +144,18 @@ The dashboard displays:
 
 ---
 
+# 📸 Environment Dashboard
+
+<p align="center">
+  <img src="./screenshots/environment-dashboard.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: Elastic Beanstalk Dashboard</em>
+</p>
+
+---
+
 # ⚙️ Step 4 — Test the Application URL
 
 Near the top of the page:
@@ -125,6 +171,18 @@ Expected result:
 ```text
 HTTP Status 404 - Not Found
 ```
+
+---
+
+# 📸 HTTP 404 Error
+
+<p align="center">
+  <img src="./screenshots/http-404-error.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 3: HTTP 404 - No Application Deployed Yet</em>
+</p>
 
 ---
 
@@ -182,6 +240,18 @@ Choose:
 
 ---
 
+# 📸 Upload and Deploy Application
+
+<p align="center">
+  <img src="./screenshots/upload-deploy.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 4: Upload and Deploy Tomcat Application</em>
+</p>
+
+---
+
 # 🧠 Deployment Explanation
 
 Elastic Beanstalk automatically:
@@ -208,6 +278,18 @@ Wait until:
 
 ---
 
+# 📸 Deployment Progress
+
+<p align="center">
+  <img src="./screenshots/deployment-progress.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 5: Elastic Beanstalk Deployment Progress</em>
+</p>
+
+---
+
 # ⚙️ Step 4 — Access the Application
 
 Choose the Domain URL again.
@@ -215,6 +297,18 @@ Choose the Domain URL again.
 Expected result:
 
 - The Tomcat sample web application appears successfully.
+
+---
+
+# 📸 Tomcat Application Running
+
+<p align="center">
+  <img src="./screenshots/tomcat-app-running.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 6: Tomcat Web Application Successfully Deployed</em>
+</p>
 
 ---
 
@@ -268,6 +362,18 @@ samp
 
 ---
 
+# 📸 EC2 Instances Created by Elastic Beanstalk
+
+<p align="center">
+  <img src="./screenshots/ec2-instances.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 7: EC2 Instances Hosting the Application</em>
+</p>
+
+---
+
 # 🧠 EC2 Instance Explanation
 
 The EC2 instances host:
@@ -293,6 +399,18 @@ Choose:
 Observe:
 
 - Port 80 (HTTP) is open
+
+---
+
+# 📸 Security Group Configuration
+
+<p align="center">
+  <img src="./screenshots/security-group-http.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 8: Security Group Allowing HTTP Traffic</em>
+</p>
 
 ---
 
@@ -332,6 +450,18 @@ Observe:
 - An Elastic Load Balancer
 
 The load balancer distributes traffic between EC2 instances.
+
+---
+
+# 📸 Elastic Load Balancer
+
+<p align="center">
+  <img src="./screenshots/load-balancer.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 9: Elastic Load Balancer Distribution</em>
+</p>
 
 ---
 
@@ -380,6 +510,18 @@ Observe:
 
 ---
 
+# 📸 Auto Scaling Group
+
+<p align="center">
+  <img src="./screenshots/auto-scaling-group.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 10: Auto Scaling Group Configuration</em>
+</p>
+
+---
+
 # 🧠 Auto Scaling Explanation
 
 Elastic Beanstalk automatically scales infrastructure based on:
@@ -412,6 +554,18 @@ Observe:
 - Network traffic
 - Request count
 - Instance health
+
+---
+
+# 📸 Elastic Beanstalk Monitoring
+
+<p align="center">
+  <img src="./screenshots/elastic-beanstalk-monitoring.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 11: CloudWatch Monitoring Metrics</em>
+</p>
 
 ---
 
