@@ -278,18 +278,6 @@ Wait until:
 
 ---
 
-# 📸 Deployment Progress
-
-<p align="center">
-  <img src="./screenshots/deployment-progress.png" width="900"/>
-</p>
-
-<p align="center">
-  <em>Figure 5: Elastic Beanstalk Deployment Progress</em>
-</p>
-
----
-
 # ⚙️ Step 4 — Access the Application
 
 Choose the Domain URL again.
