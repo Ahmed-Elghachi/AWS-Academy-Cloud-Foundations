@@ -364,7 +364,7 @@ To retrieve the instance ID:
 Example:
 
 ```bash
-i-0abc123456789xyz0
+i-01e11a9eebc7c5b9b
 ```
 
 ---
