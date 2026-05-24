@@ -90,7 +90,7 @@ Each lab is designed to reinforce theoretical concepts with practical implementa
 - 🔐 [IAM Introduction Lab](./IAM-Introduction-Lab)
 - 🌐 [Build your VPC and Launch a Web Server](./Build-your-VPC-and-Launch-a-Web-Server)
 - 🖥️ [Introduction to Amazon EC2 ](./Introduction-to-Amazon-EC2)
-- 📦 EBS Volume Management Lab  
+- ⚡ [AWS Lambda ](./AWS-Lambda)
 - 🗄️ RDS Database Deployment Lab  
 - ⚖️ Auto Scaling & Load Balancer Lab  
 - 📊 CloudWatch Monitoring Lab  
