@@ -32,24 +32,6 @@ Developers can focus on application code while AWS manages the infrastructure.
 
 ---
 
-# 🌱 Elastic Beanstalk Architecture
-
-```text
-👤 User
-   ↓
-🌐 Internet
-   ↓
-⚖️ Elastic Load Balancer
-   ↓
-🌱 Elastic Beanstalk Environment
-   ↓
-🖥️ EC2 Instances
-   ↓
-📦 Web Application
-```
-
----
-
 # 🎯 Lab Objectives
 
 After completing this lab, you will be able to:
