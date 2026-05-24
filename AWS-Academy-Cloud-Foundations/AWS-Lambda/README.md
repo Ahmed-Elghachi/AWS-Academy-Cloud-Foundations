@@ -270,19 +270,6 @@ The Lambda function uses:
 The function will execute automatically every minute using the EventBridge trigger configured previously.
 
 ---
-
-# 🧠 Lambda Architecture
-
-<p align="center">
-  <img src="./screenshots/lambda-ec2-architecture.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>Figure 1: AWS Lambda Automatically Stopping an EC2 Instance</em>
-</p>
-
----
-
 # ⚙️ Step 1 — Open the Lambda Code Editor
 
 Inside the Lambda console:
