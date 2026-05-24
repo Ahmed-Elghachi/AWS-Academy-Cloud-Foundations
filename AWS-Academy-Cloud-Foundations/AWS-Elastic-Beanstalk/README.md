@@ -42,13 +42,6 @@ After completing this lab, you will be able to:
 ✅ Explore AWS infrastructure resources  
 ✅ Understand Auto Scaling and Load Balancing  
 
----
-
-# ⏱️ Duration
-
-Approximate time:
-
-- 30 minutes
 
 ---
 
