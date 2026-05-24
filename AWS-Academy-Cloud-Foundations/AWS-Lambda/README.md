@@ -139,18 +139,6 @@ Configure:
 
 ---
 
-# Create Lambda Function
-
-<p align="center">
-  <img src="./screenshots/create-function.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>Figure 3: Create Lambda Function</em>
-</p>
-
----
-
 # ⚙️ Step 3 — Configure Execution Role
 
 Expand:
@@ -179,18 +167,6 @@ The IAM role:
 - Grants EC2 permissions
 - Allows stopping EC2 instances
 - Controls API access securely
-
----
-
-# Lambda Execution Role
-
-<p align="center">
-  <img src="./screenshots/lambda-role.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>Figure 4: Lambda Execution Role Configuration</em>
-</p>
 
 ---
 
