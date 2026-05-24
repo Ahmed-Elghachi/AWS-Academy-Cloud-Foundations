@@ -87,12 +87,6 @@ You will monitor:
 
 ---
 
-# ⏱️ Duration
-
-Approximate time: 30 minutes
-
----
-
 # 🌐 Task 1 — Create a Lambda Function
 
 ---
