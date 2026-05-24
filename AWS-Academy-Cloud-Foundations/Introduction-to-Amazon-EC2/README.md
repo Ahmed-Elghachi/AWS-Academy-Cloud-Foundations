@@ -1577,3 +1577,80 @@ These limits help to:
 running on-demand
 
 ---
+
+# 🔐 Task 6 — Test Stop Protection
+
+## 📌 Description
+
+Amazon EC2 provides a feature called **Stop Protection** that prevents an instance from being accidentally stopped.
+
+In this task, you will:
+
+- Test Stop Protection
+- Observe the protection error message
+- Disable Stop Protection
+- Successfully stop the EC2 instance
+
+---
+
+# 🧭 Step 1 — Return to EC2 Console
+
+## 📌 Procedure
+
+- Open the AWS Management Console
+- In the search bar next to **Services**
+- Search for:
+  - `EC2`
+- Open the **EC2 Console**
+
+---
+
+# 📸 EC2 Console
+
+<p align="center">
+  <img src="./screenshots/ec2-console.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: Amazon EC2 Console</em>
+</p>
+
+---
+
+# 🧭 Step 2 — Attempt to Stop the Instance
+
+## 📌 Procedure
+
+- In the left navigation pane, choose:
+  - **Instances**
+- Select:
+  - `Web Server`
+- In the **Instance state** menu, choose:
+  - **Stop instance**
+
+---
+
+# 📸 Attempt to Stop Instance
+
+<p align="center">
+  <img src="./screenshots/attempt-stop-instance.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: Attempting to Stop the Protected EC2 Instance</em>
+</p>
+
+---
+
+# ⚠️ Stop Protection Error Message
+
+Choose:
+
+- **Stop**
+
+AWS displays the following error message:
+
+```text
+Failed to stop the instance i-1234567xxx.
+The instance 'i-1234567xxx' may not be stopped.
+Modify its 'disableApiStop' instance attribute and try again.
