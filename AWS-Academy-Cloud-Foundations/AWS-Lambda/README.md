@@ -445,18 +445,6 @@ AWS Lambda will deploy the updated code.
 
 ---
 
-# Lambda Deployment Successful
-
-<p align="center">
-  <img src="./screenshots/lambda-deploy-success.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>Figure 4: Lambda Function Successfully Deployed</em>
-</p>
-
----
-
 # ⚙️ Step 4 — Open the Monitoring Tab
 
 Choose:
