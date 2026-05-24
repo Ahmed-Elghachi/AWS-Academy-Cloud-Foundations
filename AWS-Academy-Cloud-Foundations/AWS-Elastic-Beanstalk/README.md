@@ -443,19 +443,6 @@ The load balancer distributes traffic between EC2 instances.
 
 ---
 
-# Elastic Load Balancer Architecture
-
-```text
-🌐 Internet
-      ↓
-⚖️ Elastic Load Balancer
-      ↓
-🖥️ EC2 Instance 1
-🖥️ EC2 Instance 2
-```
-
----
-
 # 🧠 Load Balancer Explanation
 
 The load balancer improves:
