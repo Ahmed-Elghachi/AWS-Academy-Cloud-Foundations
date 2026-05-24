@@ -1606,18 +1606,6 @@ In this task, you will:
 
 ---
 
-# 📸 EC2 Console
-
-<p align="center">
-  <img src="./screenshots/ec2-console.png" width="850"/>
-</p>
-
-<p align="center">
-  <em>Figure 1: Amazon EC2 Console</em>
-</p>
-
----
-
 # 🧭 Step 2 — Attempt to Stop the Instance
 
 ## 📌 Procedure
