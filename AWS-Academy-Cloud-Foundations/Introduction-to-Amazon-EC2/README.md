@@ -1497,3 +1497,83 @@ Amazon EC2 provides flexible scalability features that allow administrators to:
 These capabilities are essential in cloud computing, DevOps, and cybersecurity environments.
 
 ---
+# 📊 Task 5 — Explore EC2 Limits
+
+## 📌 Description
+
+Amazon EC2 provides different AWS resources that you can use, including:
+
+- Amazon Machine Images (AMIs)
+- EC2 Instances
+- EBS Volumes
+- Snapshots
+
+When you create an AWS account, AWS applies default service quotas (limits) per region.
+
+These limits help to:
+
+- Prevent resource overuse
+- Ensure system stability
+- Control costs
+- Maintain fair usage across customers
+
+---
+
+## 🧭 Step 1 — Open Service Quotas
+
+### 📌 Procedure
+
+- Open the AWS Management Console
+- In the search bar, type:
+  - **Service Quotas**
+- Select **Service Quotas**
+
+---
+
+### 📸 Service Quotas Console
+
+<p align="center">
+  <img src="./screenshots/service-quotas-console.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: AWS Service Quotas Dashboard</em>
+</p>
+
+---
+
+## 🧭 Step 2 — Select Amazon EC2 Service
+
+### 📌 Procedure
+
+- In the left navigation menu, select:
+  - **AWS services**
+- In the search box, type:
+  - **ec2**
+- Choose:
+  - **Amazon Elastic Compute Cloud (Amazon EC2)**
+
+---
+
+### 📸 EC2 Service Selection
+
+<p align="center">
+  <img src="./screenshots/ec2-service-selection.png" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: Selecting Amazon EC2 in Service Quotas</em>
+</p>
+
+---
+
+## 🔎 Step 3 — Search EC2 Limits
+
+### 📌 Procedure
+
+- In the **Find quotas** search bar, type:
+
+```text
+running on-demand
+
+---
