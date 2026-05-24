@@ -402,16 +402,6 @@ Observe:
 
 ---
 
-# Security Group Rules
-
-```text
-Inbound Rules
---------------------------------
-HTTP   TCP   80   0.0.0.0/0
-```
-
----
-
 # 🧠 Security Group Explanation
 
 The security group acts as a virtual firewall.
