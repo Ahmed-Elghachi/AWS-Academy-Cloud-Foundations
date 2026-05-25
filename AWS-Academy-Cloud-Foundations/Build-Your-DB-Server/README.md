@@ -397,18 +397,6 @@ Click:
 Create Database
 ```
 
-### Figure 19 — Launch Database
-
-<p align="center">
-  <img src="./screenshots/launch-db.png" width="950"/>
-</p>
-
-<p align="center">
-  <em>Figure 19: Launch Amazon RDS Database</em>
-</p>
-
----
-
 ## Verify Database Availability
 
 Wait until the database status changes to:
