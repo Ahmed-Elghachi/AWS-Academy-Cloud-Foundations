@@ -92,7 +92,7 @@ Each lab is designed to reinforce theoretical concepts with practical implementa
 - 🖥️ [Introduction to Amazon EC2 ](./Introduction-to-Amazon-EC2)
 - ⚡ [Activity : AWS Lambda ](./AWS-Lambda)
 - ☁️ [Activity : AWS Elastic Beanstalk ](./AWS-Elastic-Beanstalk)
-- 🗄️ RDS Database Deployment Lab  
+- 🗄️ [Working with EBS ](./Working-with-EBS)
 - ⚖️ Auto Scaling & Load Balancer Lab  
 - 📊 CloudWatch Monitoring Lab  
 - 🔐 S3 Security & Bucket Policy Lab  
