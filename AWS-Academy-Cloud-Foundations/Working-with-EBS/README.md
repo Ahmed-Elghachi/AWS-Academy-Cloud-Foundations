@@ -137,7 +137,7 @@ EC2 → Volumes → Create Volume
 | Size | 1 GiB |
 | Availability Zone | Same as EC2 instance |
 
-### Figure 5 — Create EBS Volume
+### Create EBS Volume
 
 <p align="center">
   <img src="./screenshots/create-ebs-volume.png" width="900"/>
@@ -155,7 +155,7 @@ EC2 → Volumes → Create Volume
 |---|---|
 | Name | My Volume |
 
-### Figure 6 — Add Volume Tag
+### Add Volume Tag
 
 <p align="center">
   <img src="./screenshots/ebs-tag.png" width="900"/>
@@ -190,19 +190,6 @@ My Volume
 ```text
 Actions → Attach Volume
 ```
-
-### Figure 7 — Attach EBS Volume
-
-<p align="center">
-  <img src="./screenshots/attach-volume.png" width="900"/>
-</p>
-
-<p align="center">
-  <em>Figure 7: Attach EBS Volume</em>
-</p>
-
----
-
 3. Configure:
 
 | Setting | Value |
@@ -210,7 +197,7 @@ Actions → Attach Volume
 | Instance | Lab |
 | Device Name | /dev/sdb |
 
-### Figure 8 — Volume Attachment Configuration
+### Volume Attachment Configuration
 
 <p align="center">
   <img src="./screenshots/volume-attachment-settings.png" width="900"/>
@@ -258,25 +245,13 @@ Connect
 Session Manager → Connect
 ```
 
-### Figure 9 — Session Manager Connection
-
-<p align="center">
-  <img src="./screenshots/session-manager.png" width="900"/>
-</p>
-
-<p align="center">
-  <em>Figure 9: Session Manager Connection</em>
-</p>
-
----
-
 ## Switch User
 
 ```text
 sudo su -l ec2-user
 ```
 
-### Figure 10 — Switch to ec2-user
+### Switch to ec2-user
 
 <p align="center">
   <img src="./screenshots/switch-user.png" width="900"/>
@@ -296,7 +271,7 @@ sudo su -l ec2-user
 df -h
 ```
 
-### Figure 11 — Check Existing Storage
+### Check Existing Storage
 
 <p align="center">
   <img src="./screenshots/df-h-before.png" width="900"/>
@@ -332,7 +307,7 @@ sudo mkfs -t ext3 /dev/sdb
 sudo mkdir /mnt/data-store
 ```
 
-### Figure 13 — Create Mount Directory
+### Create Mount Directory
 
 <p align="center">
   <img src="./screenshots/mkdir-data-store.png" width="900"/>
@@ -350,7 +325,7 @@ sudo mkdir /mnt/data-store
 sudo mount /dev/sdb /mnt/data-store
 ```
 
-### Figure 14 — Mount EBS Volume
+###  Mount EBS Volume
 
 <p align="center">
   <img src="./screenshots/mount-volume.png" width="900"/>
@@ -368,7 +343,7 @@ sudo mount /dev/sdb /mnt/data-store
 echo "/dev/sdb   /mnt/data-store ext3 defaults,noatime 1 2" | sudo tee -a /etc/fstab
 ```
 
-### Figure 15 — Configure fstab
+### Configure fstab
 
 <p align="center">
   <img src="./screenshots/configure-fstab.png" width="900"/>
@@ -386,7 +361,7 @@ echo "/dev/sdb   /mnt/data-store ext3 defaults,noatime 1 2" | sudo tee -a /etc/f
 cat /etc/fstab
 ```
 
-### Figure 16 — Verify fstab Configuration
+### Verify fstab Configuration
 
 <p align="center">
   <img src="./screenshots/verify-fstab.png" width="900"/>
@@ -404,13 +379,7 @@ cat /etc/fstab
 df -h
 ```
 
-Expected output includes:
-
-```text
-/dev/xvdb
-```
-
-### Figure 17 — Verify Mounted Storage
+### Verify Mounted Storage
 
 <p align="center">
   <img src="./screenshots/df-h-after.png" width="900"/>
@@ -428,7 +397,7 @@ Expected output includes:
 sudo sh -c "echo some text has been written > /mnt/data-store/file.txt"
 ```
 
-### Figure 18 — Create Test File
+### Create Test File
 
 <p align="center">
   <img src="./screenshots/create-test-file.png" width="900"/>
@@ -446,13 +415,8 @@ sudo sh -c "echo some text has been written > /mnt/data-store/file.txt"
 cat /mnt/data-store/file.txt
 ```
 
-Expected:
 
-```text
-some text has been written
-```
-
-### Figure 19 — Verify File Content
+###  Verify File Content
 
 <p align="center">
   <img src="./screenshots/verify-test-file.png" width="900"/>
@@ -485,26 +449,13 @@ My Volume
 ```text
 Actions → Create Snapshot
 ```
-
-### Figure 20 — Create Snapshot
-
-<p align="center">
-  <img src="./screenshots/create-snapshot.png" width="900"/>
-</p>
-
-<p align="center">
-  <em>Figure 20: Create Snapshot</em>
-</p>
-
----
-
 ### Add Tag
 
 | Key | Value |
 |---|---|
 | Name | My Snapshot |
 
-### Figure 21 — Snapshot Tag Configuration
+### Snapshot Tag Configuration
 
 <p align="center">
   <img src="./screenshots/snapshot-tag.png" width="900"/>
@@ -530,7 +481,7 @@ Status progression:
 Pending → Completed
 ```
 
-### Figure 22 — Snapshot Completed
+###  Snapshot Completed
 
 <p align="center">
   <img src="./screenshots/snapshot-completed.png" width="900"/>
@@ -548,7 +499,7 @@ Pending → Completed
 sudo rm /mnt/data-store/file.txt
 ```
 
-### Figure 23 — Delete Test File
+### Delete Test File
 
 <p align="center">
   <img src="./screenshots/delete-file.png" width="900"/>
@@ -566,7 +517,7 @@ sudo rm /mnt/data-store/file.txt
 ls /mnt/data-store/
 ```
 
-### Figure 24 — Verify File Deletion
+### Verify File Deletion
 
 <p align="center">
   <img src="./screenshots/verify-delete.png" width="900"/>
@@ -593,19 +544,6 @@ My Snapshot
 ```text
 Actions → Create Volume from Snapshot
 ```
-
-### Figure 25 — Restore Snapshot to New Volume
-
-<p align="center">
-  <img src="./screenshots/restore-snapshot.png" width="900"/>
-</p>
-
-<p align="center">
-  <em>Figure 25: Restore Snapshot to New Volume</em>
-</p>
-
----
-
 ## Configuration
 
 | Setting | Value |
@@ -618,7 +556,7 @@ Actions → Create Volume from Snapshot
 |---|---|
 | Name | Restored Volume |
 
-### Figure 26 — Restored Volume Tag
+### Restored Volume Tag
 
 <p align="center">
   <img src="./screenshots/restored-volume-tag.png" width="900"/>
@@ -649,19 +587,6 @@ Restored Volume
 ```text
 Actions → Attach Volume
 ```
-
-### Figure 27 — Attach Restored Volume
-
-<p align="center">
-  <img src="./screenshots/attach-restored-volume.png" width="900"/>
-</p>
-
-<p align="center">
-  <em>Figure 27: Attach Restored Volume</em>
-</p>
-
----
-
 ## Configuration
 
 | Setting | Value |
@@ -679,7 +604,7 @@ Actions → Attach Volume
 sudo mkdir /mnt/data-store2
 ```
 
-### Figure 28 — Create Second Mount Directory
+### Create Second Mount Directory
 
 <p align="center">
   <img src="./screenshots/create-data-store2.png" width="900"/>
@@ -697,7 +622,7 @@ sudo mkdir /mnt/data-store2
 sudo mount /dev/sdc /mnt/data-store2
 ```
 
-### Figure 29 — Mount Restored Volume
+### Mount Restored Volume
 
 <p align="center">
   <img src="./screenshots/mount-restored-volume.png" width="900"/>
@@ -715,13 +640,7 @@ sudo mount /dev/sdc /mnt/data-store2
 ls /mnt/data-store2/
 ```
 
-Expected:
-
-```text
-file.txt
-```
-
-### Figure 30 — Verify Restored File
+### Verify Restored File
 
 <p align="center">
   <img src="./screenshots/verify-restored-file.png" width="900"/>
@@ -748,45 +667,3 @@ In this lab, you successfully:
 
 ---
 
-# 🧠 Key Commands Summary
-
-```text
-df -h
-sudo mkfs -t ext3 /dev/sdb
-sudo mkdir /mnt/data-store
-sudo mount /dev/sdb /mnt/data-store
-cat /etc/fstab
-sudo rm /mnt/data-store/file.txt
-sudo mkdir /mnt/data-store2
-sudo mount /dev/sdc /mnt/data-store2
-```
-
----
-
-# 📌 Final Notes
-
-Amazon EBS is a powerful persistent storage solution for AWS EC2 instances.
-
-Snapshots provide:
-
-- Backup capability
-- Disaster recovery
-- Volume cloning
-- Data migration
-
----
-
-# 🏁 Lab Complete
-
-Congratulations 🎉
-
-You have completed:
-
-✅ EBS Volume Creation  
-✅ Volume Attachment  
-✅ Filesystem Configuration  
-✅ Snapshot Creation  
-✅ Snapshot Restoration  
-✅ Data Recovery Verification
-
----
