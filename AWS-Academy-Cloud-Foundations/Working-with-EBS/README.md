@@ -116,7 +116,7 @@ us-east-1a
 </p>
 
 <p align="center">
-  <em>Figure 4: EC2 Lab Instance</em>
+  <em>Figure 2: EC2 Lab Instance</em>
 </p>
 
 ---
@@ -144,7 +144,7 @@ EC2 → Volumes → Create Volume
 </p>
 
 <p align="center">
-  <em>Figure 5: Create EBS Volume</em>
+  <em>Figure 3: Create EBS Volume</em>
 </p>
 
 ---
@@ -162,7 +162,7 @@ EC2 → Volumes → Create Volume
 </p>
 
 <p align="center">
-  <em>Figure 6: Add Volume Tag</em>
+  <em>Figure 4: Add Volume Tag</em>
 </p>
 
 ---
@@ -204,7 +204,7 @@ Actions → Attach Volume
 </p>
 
 <p align="center">
-  <em>Figure 8: Volume Attachment Configuration</em>
+  <em>Figure 5: Volume Attachment Configuration</em>
 </p>
 
 ---
@@ -258,7 +258,7 @@ sudo su -l ec2-user
 </p>
 
 <p align="center">
-  <em>Figure 10: Switch to ec2-user</em>
+  <em>Figure 6: Switch to ec2-user</em>
 </p>
 
 ---
@@ -278,7 +278,7 @@ df -h
 </p>
 
 <p align="center">
-  <em>Figure 11: Check Existing Storage</em>
+  <em>Figure 7: Check Existing Storage</em>
 </p>
 
 ---
@@ -289,14 +289,15 @@ df -h
 sudo mkfs -t ext3 /dev/sdb
 ```
 
-### Figure 12 — Create ext3 Filesystem
+### 
+Create ext3 Filesystem
 
 <p align="center">
   <img src="./screenshots/mkfs-ext3.png" width="900"/>
 </p>
 
 <p align="center">
-  <em>Figure 12: Create ext3 Filesystem</em>
+  <em>Figure 8: Create ext3 Filesystem</em>
 </p>
 
 ---
@@ -314,7 +315,7 @@ sudo mkdir /mnt/data-store
 </p>
 
 <p align="center">
-  <em>Figure 13: Create Mount Directory</em>
+  <em>Figure 9: Create Mount Directory</em>
 </p>
 
 ---
@@ -332,7 +333,7 @@ sudo mount /dev/sdb /mnt/data-store
 </p>
 
 <p align="center">
-  <em>Figure 14: Mount EBS Volume</em>
+  <em>Figure 10: Mount EBS Volume</em>
 </p>
 
 ---
@@ -350,7 +351,7 @@ echo "/dev/sdb   /mnt/data-store ext3 defaults,noatime 1 2" | sudo tee -a /etc/f
 </p>
 
 <p align="center">
-  <em>Figure 15: Configure fstab</em>
+  <em>Figure 10: Configure fstab</em>
 </p>
 
 ---
@@ -368,7 +369,7 @@ cat /etc/fstab
 </p>
 
 <p align="center">
-  <em>Figure 16: Verify fstab Configuration</em>
+  <em>Figure 11: Verify fstab Configuration</em>
 </p>
 
 ---
@@ -386,7 +387,7 @@ df -h
 </p>
 
 <p align="center">
-  <em>Figure 17: Verify Mounted Storage</em>
+  <em>Figure 12: Verify Mounted Storage</em>
 </p>
 
 ---
@@ -404,7 +405,7 @@ sudo sh -c "echo some text has been written > /mnt/data-store/file.txt"
 </p>
 
 <p align="center">
-  <em>Figure 18: Create Test File</em>
+  <em>Figure 13: Create Test File</em>
 </p>
 
 ---
@@ -423,7 +424,7 @@ cat /mnt/data-store/file.txt
 </p>
 
 <p align="center">
-  <em>Figure 19: Verify File Content</em>
+  <em>Figure 14: Verify File Content</em>
 </p>
 
 ---
@@ -462,7 +463,7 @@ Actions → Create Snapshot
 </p>
 
 <p align="center">
-  <em>Figure 21: Snapshot Tag Configuration</em>
+  <em>Figure 15: Snapshot Tag Configuration</em>
 </p>
 
 ---
@@ -488,7 +489,7 @@ Pending → Completed
 </p>
 
 <p align="center">
-  <em>Figure 22: Snapshot Completed</em>
+  <em>Figure 16: Snapshot Completed</em>
 </p>
 
 ---
@@ -506,7 +507,7 @@ sudo rm /mnt/data-store/file.txt
 </p>
 
 <p align="center">
-  <em>Figure 23: Delete Test File</em>
+  <em>Figure 17: Delete Test File</em>
 </p>
 
 ---
@@ -524,7 +525,7 @@ ls /mnt/data-store/
 </p>
 
 <p align="center">
-  <em>Figure 24: Verify File Deletion</em>
+  <em>Figure 18: Verify File Deletion</em>
 </p>
 
 ---
@@ -563,7 +564,7 @@ Actions → Create Volume from Snapshot
 </p>
 
 <p align="center">
-  <em>Figure 26: Restored Volume Tag</em>
+  <em>Figure 19: Restored Volume Tag</em>
 </p>
 
 ---
@@ -611,7 +612,7 @@ sudo mkdir /mnt/data-store2
 </p>
 
 <p align="center">
-  <em>Figure 28: Create Second Mount Directory</em>
+  <em>Figure 20: Create Second Mount Directory</em>
 </p>
 
 ---
@@ -629,7 +630,7 @@ sudo mount /dev/sdc /mnt/data-store2
 </p>
 
 <p align="center">
-  <em>Figure 29: Mount Restored Volume</em>
+  <em>Figure 21: Mount Restored Volume</em>
 </p>
 
 ---
@@ -647,7 +648,7 @@ ls /mnt/data-store2/
 </p>
 
 <p align="center">
-  <em>Figure 30: Verify Restored File</em>
+  <em>Figure 22: Verify Restored File</em>
 </p>
 
 ---
