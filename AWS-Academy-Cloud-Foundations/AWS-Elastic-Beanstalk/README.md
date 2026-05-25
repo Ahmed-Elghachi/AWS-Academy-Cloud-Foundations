@@ -295,7 +295,7 @@ Expected result:
 </p>
 
 <p align="center">
-  <em>Figure 6: Tomcat Web Application Successfully Deployed</em>
+  <em>Figure 5: Tomcat Web Application Successfully Deployed</em>
 </p>
 
 ---
@@ -357,7 +357,7 @@ samp
 </p>
 
 <p align="center">
-  <em>Figure 7: EC2 Instances Hosting the Application</em>
+  <em>Figure 6: EC2 Instances Hosting the Application</em>
 </p>
 
 ---
@@ -397,7 +397,7 @@ Observe:
 </p>
 
 <p align="center">
-  <em>Figure 8: Security Group Allowing HTTP Traffic</em>
+  <em>Figure 7: Security Group Allowing HTTP Traffic</em>
 </p>
 
 ---
@@ -438,7 +438,7 @@ The load balancer distributes traffic between EC2 instances.
 </p>
 
 <p align="center">
-  <em>Figure 9: Elastic Load Balancer Distribution</em>
+  <em>Figure 8: Elastic Load Balancer Distribution</em>
 </p>
 
 ---
@@ -482,7 +482,7 @@ Observe:
 </p>
 
 <p align="center">
-  <em>Figure 10: Auto Scaling Group Configuration</em>
+  <em>Figure 9: Auto Scaling Group Configuration</em>
 </p>
 
 ---
