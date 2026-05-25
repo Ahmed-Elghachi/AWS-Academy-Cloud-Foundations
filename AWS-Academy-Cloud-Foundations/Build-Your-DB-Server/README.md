@@ -504,17 +504,6 @@ Click:
 ```text
 Submit
 ```
-
-### Figure 25 — Database Initialization
-
-<p align="center">
-  <img src="./screenshots/db-init.png" width="950"/>
-</p>
-
-<p align="center">
-  <em>Figure 25: Database Initialization Process</em>
-</p>
-
 ---
 
 ## Address Book Application
