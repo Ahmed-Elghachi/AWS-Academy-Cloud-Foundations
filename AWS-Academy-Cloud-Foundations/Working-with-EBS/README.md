@@ -90,42 +90,12 @@ Amazon Elastic Block Store (EBS) provides persistent block-level storage volumes
 
 ---
 
-# 🚀 Access AWS Console
-
-1. Click **Start Lab**
-2. Wait for **Lab Status: Ready**
-3. Click **AWS**
-4. Open the AWS Management Console
-
-### Figure 2 — AWS Lab Environment
-
-<p align="center">
-  <img src="./screenshots/aws-lab-start.png" width="900"/>
-</p>
-
-<p align="center">
-  <em>Figure 2: AWS Lab Environment</em>
-</p>
-
----
-
 # 🧩 Task 1 — Create a New EBS Volume
 
 ## Step 1: Open EC2
 
 - Go to AWS Console
 - Search for **EC2**
-
-### Figure 3 — Open EC2 Service
-
-<p align="center">
-  <img src="./screenshots/open-ec2.png" width="900"/>
-</p>
-
-<p align="center">
-  <em>Figure 3: Open EC2 Service</em>
-</p>
-
 ---
 
 ## Step 2: Verify Existing Instance
