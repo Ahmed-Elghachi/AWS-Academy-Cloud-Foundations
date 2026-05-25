@@ -177,16 +177,6 @@ RDS
 Subnet Groups
 ```
 
-### Figure 7 — Open DB Subnet Groups
-
-<p align="center">
-  <img src="./screenshots/open-subnet-groups.png" width="950"/>
-</p>
-
-<p align="center">
-  <em>Figure 7: Open DB Subnet Groups</em>
-</p>
-
 ---
 
 ## Create DB Subnet Group
@@ -199,7 +189,7 @@ Configure:
 | Description | DB Subnet Group |
 | VPC | Lab VPC |
 
-### Figure 8 — Create DB Subnet Group
+### Create DB Subnet Group
 
 <p align="center">
   <img src="./screenshots/create-subnet-group.png" width="950"/>
