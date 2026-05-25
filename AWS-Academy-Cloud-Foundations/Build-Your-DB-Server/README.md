@@ -117,18 +117,6 @@ VPC
 Security Groups
 ```
 
-### Figure 4 — Open Security Groups
-
-<p align="center">
-  <img src="./screenshots/open-security-groups.png" width="950"/>
-</p>
-
-<p align="center">
-  <em>Figure 4: Open Security Groups</em>
-</p>
-
----
-
 ## Create Security Group
 
 Configure:
