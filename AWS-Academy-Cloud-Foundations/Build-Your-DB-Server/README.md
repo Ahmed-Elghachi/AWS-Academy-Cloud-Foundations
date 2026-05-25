@@ -367,17 +367,6 @@ Uncheck:
 ```text
 Enable Enhanced Monitoring
 ```
-
-### Figure 17 — Disable Enhanced Monitoring
-
-<p align="center">
-  <img src="./screenshots/disable-monitoring.png" width="950"/>
-</p>
-
-<p align="center">
-  <em>Figure 17: Disable Enhanced Monitoring</em>
-</p>
-
 ---
 
 ## Additional Configuration
