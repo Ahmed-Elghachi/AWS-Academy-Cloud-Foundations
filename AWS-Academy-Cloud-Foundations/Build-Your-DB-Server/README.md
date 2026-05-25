@@ -17,14 +17,14 @@ In this lab, you will:
 
 ---
 
-# 🧠 Architectural Diagram
+# 📖 Scenario Overview
 
 <p align="center">
-  <img src="./screenshots/rds-architecture.png" width="950"/>
+  <img src="./screenshots/rds-lab-architecture.png" width="950"/>
 </p>
 
 <p align="center">
-  <em>Figure 1: Amazon RDS Multi-AZ Architecture with EC2 Web Application</em>
+  <em>Figure 1: Initial and Final AWS Infrastructure</em>
 </p>
 
 ---
@@ -51,12 +51,6 @@ Before starting this lab, you should be familiar with:
 - Basic networking concepts
 - Relational database fundamentals
 - Security Groups and VPC basics
-
----
-
-# ⏱️ Duration
-
-Approximate lab duration: **30 minutes**
 
 ---
 
