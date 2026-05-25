@@ -14,49 +14,15 @@ In this lab, you will learn how to:
 
 ---
 
-# 🏗️ Architectural Diagram
+# 🧠 Architectural Diagram
 
-```text
-                           ┌─────────────────────┐
-                           │      👤 User        │
-                           │ AWS Management GUI  │
-                           └─────────┬───────────┘
-                                     │
-                                     ▼
-                     ┌──────────────────────────┐
-                     │ ☁️ AWS Cloud Environment │
-                     └────────────┬─────────────┘
-                                  │
-                                  ▼
-                    ┌───────────────────────────┐
-                    │ 🖥️ EC2 Instance (Lab)     │
-                    │ Amazon Linux              │
-                    └──────────┬────────────────┘
-                               │
-                ┌──────────────┴──────────────┐
-                ▼                             ▼
-      ┌──────────────────┐         ┌──────────────────┐
-      │ 📦 EBS Volume     │         │ 📸 EBS Snapshot  │
-      │ "My Volume"       │────────▶│ "My Snapshot"    │
-      │ /dev/sdb          │         │ Stored in S3     │
-      └─────────┬────────┘         └─────────┬────────┘
-                │                            │
-                │                            ▼
-                │               ┌────────────────────────┐
-                │               │ 📦 Restored Volume     │
-                │               │ "Restored Volume"      │
-                │               │ /dev/sdc               │
-                │               └──────────┬─────────────┘
-                │                          │
-                └──────────────────────────┘
-                               │
-                               ▼
-                 ┌─────────────────────────┐
-                 │ 📁 Mounted File Systems │
-                 │ /mnt/data-store         │
-                 │ /mnt/data-store2        │
-                 └─────────────────────────┘
-```
+<p align="center">
+  <img src="./screenshots/ebs-architecture.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: Amazon EBS Architecture with EC2 Instance and Snapshot Workflow</em>
+</p>
 
 ---
 
@@ -131,11 +97,15 @@ Amazon Elastic Block Store (EBS) provides persistent block-level storage volumes
 3. Click **AWS**
 4. Open the AWS Management Console
 
-### Figure 1 — AWS Lab Environment
+### Figure 2 — AWS Lab Environment
 
-```md
-![Figure 1 - AWS Lab Environment](screenshots/aws-lab-start.png)
-```
+<p align="center">
+  <img src="./screenshots/aws-lab-start.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: AWS Lab Environment</em>
+</p>
 
 ---
 
@@ -146,11 +116,15 @@ Amazon Elastic Block Store (EBS) provides persistent block-level storage volumes
 - Go to AWS Console
 - Search for **EC2**
 
-### Figure 2 — Open EC2 Service
+### Figure 3 — Open EC2 Service
 
-```md
-![Figure 2 - Open EC2 Service](screenshots/open-ec2.png)
-```
+<p align="center">
+  <img src="./screenshots/open-ec2.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 3: Open EC2 Service</em>
+</p>
 
 ---
 
@@ -159,7 +133,7 @@ Amazon Elastic Block Store (EBS) provides persistent block-level storage volumes
 - Click **Instances**
 - Locate the instance named:
 
-```bash
+```text
 Lab
 ```
 
@@ -167,15 +141,19 @@ Lab
 
 Example:
 
-```bash
+```text
 us-east-1a
 ```
 
-### Figure 3 — EC2 Lab Instance
+### Figure 4 — EC2 Lab Instance
 
-```md
-![Figure 3 - EC2 Lab Instance](screenshots/ec2-instance.png)
-```
+<p align="center">
+  <img src="./screenshots/ec2-instance.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 4: EC2 Lab Instance</em>
+</p>
 
 ---
 
@@ -183,7 +161,7 @@ us-east-1a
 
 Go to:
 
-```bash
+```text
 EC2 → Volumes → Create Volume
 ```
 
@@ -195,11 +173,15 @@ EC2 → Volumes → Create Volume
 | Size | 1 GiB |
 | Availability Zone | Same as EC2 instance |
 
-### Figure 4 — Create EBS Volume
+### Figure 5 — Create EBS Volume
 
-```md
-![Figure 4 - Create EBS Volume](screenshots/create-ebs-volume.png)
-```
+<p align="center">
+  <img src="./screenshots/create-ebs-volume.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 5: Create EBS Volume</em>
+</p>
 
 ---
 
@@ -209,17 +191,21 @@ EC2 → Volumes → Create Volume
 |---|---|
 | Name | My Volume |
 
-### Figure 5 — Add Volume Tag
+### Figure 6 — Add Volume Tag
 
-```md
-![Figure 5 - Add Volume Tag](screenshots/ebs-tag.png)
-```
+<p align="center">
+  <img src="./screenshots/ebs-tag.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 6: Add Volume Tag</em>
+</p>
 
 ---
 
 Click:
 
-```bash
+```text
 Create Volume
 ```
 
@@ -231,21 +217,25 @@ Create Volume
 
 1. Select:
 
-```bash
+```text
 My Volume
 ```
 
 2. Click:
 
-```bash
+```text
 Actions → Attach Volume
 ```
 
-### Figure 6 — Attach EBS Volume
+### Figure 7 — Attach EBS Volume
 
-```md
-![Figure 6 - Attach EBS Volume](screenshots/attach-volume.png)
-```
+<p align="center">
+  <img src="./screenshots/attach-volume.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 7: Attach EBS Volume</em>
+</p>
 
 ---
 
@@ -256,17 +246,21 @@ Actions → Attach Volume
 | Instance | Lab |
 | Device Name | /dev/sdb |
 
-### Figure 7 — Volume Attachment Configuration
+### Figure 8 — Volume Attachment Configuration
 
-```md
-![Figure 7 - Volume Attachment Configuration](screenshots/volume-attachment-settings.png)
-```
+<p align="center">
+  <img src="./screenshots/volume-attachment-settings.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 8: Volume Attachment Configuration</em>
+</p>
 
 ---
 
 4. Click:
 
-```bash
+```text
 Attach Volume
 ```
 
@@ -278,47 +272,55 @@ Attach Volume
 
 1. Go to:
 
-```bash
+```text
 EC2 → Instances
 ```
 
 2. Select:
 
-```bash
+```text
 Lab
 ```
 
 3. Click:
 
-```bash
+```text
 Connect
 ```
 
 4. Choose:
 
-```bash
+```text
 Session Manager → Connect
 ```
 
-### Figure 8 — Session Manager Connection
+### Figure 9 — Session Manager Connection
 
-```md
-![Figure 8 - Session Manager Connection](screenshots/session-manager.png)
-```
+<p align="center">
+  <img src="./screenshots/session-manager.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 9: Session Manager Connection</em>
+</p>
 
 ---
 
 ## Switch User
 
-```bash
+```text
 sudo su -l ec2-user
 ```
 
-### Figure 9 — Switch to ec2-user
+### Figure 10 — Switch to ec2-user
 
-```md
-![Figure 9 - Switch to ec2-user](screenshots/switch-user.png)
-```
+<p align="center">
+  <img src="./screenshots/switch-user.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 10: Switch to ec2-user</em>
+</p>
 
 ---
 
@@ -326,139 +328,175 @@ sudo su -l ec2-user
 
 ## Check Existing Storage
 
-```bash
+```text
 df -h
 ```
 
-### Figure 10 — Check Existing Storage
+### Figure 11 — Check Existing Storage
 
-```md
-![Figure 10 - Check Existing Storage](screenshots/df-h-before.png)
-```
+<p align="center">
+  <img src="./screenshots/df-h-before.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 11: Check Existing Storage</em>
+</p>
 
 ---
 
 ## Create ext3 Filesystem
 
-```bash
+```text
 sudo mkfs -t ext3 /dev/sdb
 ```
 
-### Figure 11 — Create ext3 Filesystem
+### Figure 12 — Create ext3 Filesystem
 
-```md
-![Figure 11 - Create ext3 Filesystem](screenshots/mkfs-ext3.png)
-```
+<p align="center">
+  <img src="./screenshots/mkfs-ext3.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 12: Create ext3 Filesystem</em>
+</p>
 
 ---
 
 ## Create Mount Directory
 
-```bash
+```text
 sudo mkdir /mnt/data-store
 ```
 
-### Figure 12 — Create Mount Directory
+### Figure 13 — Create Mount Directory
 
-```md
-![Figure 12 - Create Mount Directory](screenshots/mkdir-data-store.png)
-```
+<p align="center">
+  <img src="./screenshots/mkdir-data-store.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 13: Create Mount Directory</em>
+</p>
 
 ---
 
 ## Mount the Volume
 
-```bash
+```text
 sudo mount /dev/sdb /mnt/data-store
 ```
 
-### Figure 13 — Mount EBS Volume
+### Figure 14 — Mount EBS Volume
 
-```md
-![Figure 13 - Mount EBS Volume](screenshots/mount-volume.png)
-```
+<p align="center">
+  <img src="./screenshots/mount-volume.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 14: Mount EBS Volume</em>
+</p>
 
 ---
 
 ## Configure Auto-Mount
 
-```bash
+```text
 echo "/dev/sdb   /mnt/data-store ext3 defaults,noatime 1 2" | sudo tee -a /etc/fstab
 ```
 
-### Figure 14 — Configure fstab
+### Figure 15 — Configure fstab
 
-```md
-![Figure 14 - Configure fstab](screenshots/configure-fstab.png)
-```
+<p align="center">
+  <img src="./screenshots/configure-fstab.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 15: Configure fstab</em>
+</p>
 
 ---
 
 ## Verify fstab
 
-```bash
+```text
 cat /etc/fstab
 ```
 
-### Figure 15 — Verify fstab Configuration
+### Figure 16 — Verify fstab Configuration
 
-```md
-![Figure 15 - Verify fstab Configuration](screenshots/verify-fstab.png)
-```
+<p align="center">
+  <img src="./screenshots/verify-fstab.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 16: Verify fstab Configuration</em>
+</p>
 
 ---
 
 ## Verify Storage
 
-```bash
+```text
 df -h
 ```
 
 Expected output includes:
 
-```bash
+```text
 /dev/xvdb
 ```
 
-### Figure 16 — Verify Mounted Storage
+### Figure 17 — Verify Mounted Storage
 
-```md
-![Figure 16 - Verify Mounted Storage](screenshots/df-h-after.png)
-```
+<p align="center">
+  <img src="./screenshots/df-h-after.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 17: Verify Mounted Storage</em>
+</p>
 
 ---
 
 ## Create Test File
 
-```bash
+```text
 sudo sh -c "echo some text has been written > /mnt/data-store/file.txt"
 ```
 
-### Figure 17 — Create Test File
+### Figure 18 — Create Test File
 
-```md
-![Figure 17 - Create Test File](screenshots/create-test-file.png)
-```
+<p align="center">
+  <img src="./screenshots/create-test-file.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 18: Create Test File</em>
+</p>
 
 ---
 
 ## Verify File
 
-```bash
+```text
 cat /mnt/data-store/file.txt
 ```
 
 Expected:
 
-```bash
+```text
 some text has been written
 ```
 
-### Figure 18 — Verify File Content
+### Figure 19 — Verify File Content
 
-```md
-![Figure 18 - Verify File Content](screenshots/verify-test-file.png)
-```
+<p align="center">
+  <img src="./screenshots/verify-test-file.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 19: Verify File Content</em>
+</p>
 
 ---
 
@@ -468,27 +506,31 @@ some text has been written
 
 1. Go to:
 
-```bash
+```text
 EC2 → Volumes
 ```
 
 2. Select:
 
-```bash
+```text
 My Volume
 ```
 
 3. Click:
 
-```bash
+```text
 Actions → Create Snapshot
 ```
 
-### Figure 19 — Create Snapshot
+### Figure 20 — Create Snapshot
 
-```md
-![Figure 19 - Create Snapshot](screenshots/create-snapshot.png)
-```
+<p align="center">
+  <img src="./screenshots/create-snapshot.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 20: Create Snapshot</em>
+</p>
 
 ---
 
@@ -498,19 +540,15 @@ Actions → Create Snapshot
 |---|---|
 | Name | My Snapshot |
 
-### Figure 20 — Snapshot Tag Configuration
+### Figure 21 — Snapshot Tag Configuration
 
-```md
-![Figure 20 - Snapshot Tag Configuration](screenshots/snapshot-tag.png)
-```
+<p align="center">
+  <img src="./screenshots/snapshot-tag.png" width="900"/>
+</p>
 
----
-
-4. Click:
-
-```bash
-Create Snapshot
-```
+<p align="center">
+  <em>Figure 21: Snapshot Tag Configuration</em>
+</p>
 
 ---
 
@@ -518,73 +556,89 @@ Create Snapshot
 
 Go to:
 
-```bash
+```text
 EC2 → Snapshots
 ```
 
 Status progression:
 
-```bash
+```text
 Pending → Completed
 ```
 
-### Figure 21 — Snapshot Completed
+### Figure 22 — Snapshot Completed
 
-```md
-![Figure 21 - Snapshot Completed](screenshots/snapshot-completed.png)
-```
+<p align="center">
+  <img src="./screenshots/snapshot-completed.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 22: Snapshot Completed</em>
+</p>
 
 ---
 
 ## Delete Test File
 
-```bash
+```text
 sudo rm /mnt/data-store/file.txt
 ```
 
-### Figure 22 — Delete Test File
+### Figure 23 — Delete Test File
 
-```md
-![Figure 22 - Delete Test File](screenshots/delete-file.png)
-```
+<p align="center">
+  <img src="./screenshots/delete-file.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 23: Delete Test File</em>
+</p>
 
 ---
 
 ## Verify Deletion
 
-```bash
+```text
 ls /mnt/data-store/
 ```
 
-### Figure 23 — Verify File Deletion
+### Figure 24 — Verify File Deletion
 
-```md
-![Figure 23 - Verify File Deletion](screenshots/verify-delete.png)
-```
+<p align="center">
+  <img src="./screenshots/verify-delete.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 24: Verify File Deletion</em>
+</p>
 
 ---
 
 # ♻️ Task 6 — Restore Snapshot
 
-# Create Volume from Snapshot
+## Create Volume from Snapshot
 
 1. Select:
 
-```bash
+```text
 My Snapshot
 ```
 
 2. Click:
 
-```bash
+```text
 Actions → Create Volume from Snapshot
 ```
 
-### Figure 24 — Restore Snapshot to New Volume
+### Figure 25 — Restore Snapshot to New Volume
 
-```md
-![Figure 24 - Restore Snapshot to New Volume](screenshots/restore-snapshot.png)
-```
+<p align="center">
+  <img src="./screenshots/restore-snapshot.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 25: Restore Snapshot to New Volume</em>
+</p>
 
 ---
 
@@ -600,19 +654,15 @@ Actions → Create Volume from Snapshot
 |---|---|
 | Name | Restored Volume |
 
-### Figure 25 — Restored Volume Tag
+### Figure 26 — Restored Volume Tag
 
-```md
-![Figure 25 - Restored Volume Tag](screenshots/restored-volume-tag.png)
-```
+<p align="center">
+  <img src="./screenshots/restored-volume-tag.png" width="900"/>
+</p>
 
----
-
-Click:
-
-```bash
-Create Volume
-```
+<p align="center">
+  <em>Figure 26: Restored Volume Tag</em>
+</p>
 
 ---
 
@@ -620,27 +670,31 @@ Create Volume
 
 1. Go to:
 
-```bash
+```text
 EC2 → Volumes
 ```
 
 2. Select:
 
-```bash
+```text
 Restored Volume
 ```
 
 3. Click:
 
-```bash
+```text
 Actions → Attach Volume
 ```
 
-### Figure 26 — Attach Restored Volume
+### Figure 27 — Attach Restored Volume
 
-```md
-![Figure 26 - Attach Restored Volume](screenshots/attach-restored-volume.png)
-```
+<p align="center">
+  <img src="./screenshots/attach-restored-volume.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 27: Attach Restored Volume</em>
+</p>
 
 ---
 
@@ -651,61 +705,67 @@ Actions → Attach Volume
 | Instance | Lab |
 | Device Name | /dev/sdc |
 
-Click:
-
-```bash
-Attach Volume
-```
-
 ---
 
 # 🗂️ Mount Restored Volume
 
 ## Create Directory
 
-```bash
+```text
 sudo mkdir /mnt/data-store2
 ```
 
-### Figure 27 — Create Second Mount Directory
+### Figure 28 — Create Second Mount Directory
 
-```md
-![Figure 27 - Create Second Mount Directory](screenshots/create-data-store2.png)
-```
+<p align="center">
+  <img src="./screenshots/create-data-store2.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 28: Create Second Mount Directory</em>
+</p>
 
 ---
 
 ## Mount Volume
 
-```bash
+```text
 sudo mount /dev/sdc /mnt/data-store2
 ```
 
-### Figure 28 — Mount Restored Volume
+### Figure 29 — Mount Restored Volume
 
-```md
-![Figure 28 - Mount Restored Volume](screenshots/mount-restored-volume.png)
-```
+<p align="center">
+  <img src="./screenshots/mount-restored-volume.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 29: Mount Restored Volume</em>
+</p>
 
 ---
 
 ## Verify Restored File
 
-```bash
+```text
 ls /mnt/data-store2/
 ```
 
 Expected:
 
-```bash
+```text
 file.txt
 ```
 
-### Figure 29 — Verify Restored File
+### Figure 30 — Verify Restored File
 
-```md
-![Figure 29 - Verify Restored File](screenshots/verify-restored-file.png)
-```
+<p align="center">
+  <img src="./screenshots/verify-restored-file.png" width="900"/>
+</p>
+
+<p align="center">
+  <em>Figure 30: Verify Restored File</em>
+</p>
 
 ---
 
@@ -726,7 +786,7 @@ In this lab, you successfully:
 
 # 🧠 Key Commands Summary
 
-```bash
+```text
 df -h
 sudo mkfs -t ext3 /dev/sdb
 sudo mkdir /mnt/data-store
