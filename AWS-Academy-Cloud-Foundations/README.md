@@ -93,7 +93,7 @@ Each lab is designed to reinforce theoretical concepts with practical implementa
 - ⚡ [Activity : AWS Lambda ](./AWS-Lambda)
 - ☁️ [Activity : AWS Elastic Beanstalk ](./AWS-Elastic-Beanstalk)
 - 🗄️ [Working with EBS ](./Working-with-EBS)
-- ⚖️ Auto Scaling & Load Balancer Lab  
+- ⚖️ [Build Your DB Server and Interact With Your DB Using an App ](./Build-Your-DB-Server)
 - 📊 CloudWatch Monitoring Lab  
 - 🔐 S3 Security & Bucket Policy Lab  
 - 🌍 Static Website Hosting with S3  
