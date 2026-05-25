@@ -249,7 +249,7 @@ Configure the trigger:
 </p>
 
 <p align="center">
-  <em>Figure 2: Configuring EventBridge Trigger for Lambda</em>
+  <em>Figure 3: Configuring EventBridge Trigger for Lambda</em>
 </p>
 
 ---
@@ -293,7 +293,7 @@ This opens the built-in AWS Lambda code editor.
 </p>
 
 <p align="center">
-  <em>Figure 2: AWS Lambda Code Editor</em>
+  <em>Figure 4: AWS Lambda Code Editor</em>
 </p>
 
 ---
@@ -376,7 +376,7 @@ i-01e11a9eebc7c5b9b
 </p>
 
 <p align="center">
-  <em>Figure 3: Copying the EC2 Instance ID</em>
+  <em>Figure 5: Copying the EC2 Instance ID</em>
 </p>
 
 ---
@@ -467,7 +467,7 @@ The monitoring section displays:
 </p>
 
 <p align="center">
-  <em>Figure 5: AWS Lambda Monitoring Metrics</em>
+  <em>Figure 6: AWS Lambda Monitoring Metrics</em>
 </p>
 
 ---
