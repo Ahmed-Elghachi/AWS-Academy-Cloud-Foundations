@@ -99,35 +99,6 @@ At the beginning of the lab, the following infrastructure is already available:
 - Public and Private Subnets
 - Web Security Group
 
-### Figure 2 — Initial Infrastructure
-
-<p align="center">
-  <img src="./screenshots/initial-infrastructure.png" width="950"/>
-</p>
-
-<p align="center">
-  <em>Figure 2: Initial AWS Infrastructure</em>
-</p>
-
----
-
-# 🚀 Access AWS Console
-
-1. Click **Start Lab**
-2. Wait until the AWS status becomes green
-3. Click the **AWS** link
-4. Open the AWS Management Console
-
-### Figure 3 — AWS Console Access
-
-<p align="center">
-  <img src="./screenshots/aws-console.png" width="950"/>
-</p>
-
-<p align="center">
-  <em>Figure 3: Access AWS Management Console</em>
-</p>
-
 ---
 
 # 🛡️ Task 1 — Create a Security Group for RDS
