@@ -109,7 +109,7 @@ Example:
 us-east-1a
 ```
 
-### Figure 4 — EC2 Lab Instance
+###  — EC2 Lab Instance
 
 <p align="center">
   <img src="./screenshots/ec2-instance.png" width="900"/>
