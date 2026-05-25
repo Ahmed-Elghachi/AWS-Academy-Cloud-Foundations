@@ -259,16 +259,6 @@ RDS → Databases
 Create Database
 ```
 
-### Figure 11 — Create Database
-
-<p align="center">
-  <img src="./screenshots/create-database.png" width="950"/>
-</p>
-
-<p align="center">
-  <em>Figure 11: Create Amazon RDS Database</em>
-</p>
-
 ---
 
 ## Configure Engine Options
