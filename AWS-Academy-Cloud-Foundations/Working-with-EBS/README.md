@@ -48,12 +48,6 @@ Before starting this lab, you should be familiar with:
 
 ---
 
-# ⏱️ Duration
-
-Approximate lab duration: **30 minutes**
-
----
-
 # 🔒 AWS Service Restrictions
 
 In this lab environment, access is restricted only to the AWS services required for the lab.
