@@ -127,7 +127,7 @@ Configure:
 | Description | Permit access from Web Security Group |
 | VPC | Lab VPC |
 
-### Figure 5 — Create DB Security Group
+### Create DB Security Group
 
 <p align="center">
   <img src="./screenshots/create-db-sg.png" width="950"/>
@@ -149,7 +149,7 @@ Configure:
 | Port | 3306 |
 | Source | Web Security Group |
 
-### Figure 6 — Configure Inbound Rule
+### Configure Inbound Rule
 
 <p align="center">
   <img src="./screenshots/db-sg-rule.png" width="950"/>
@@ -210,7 +210,7 @@ us-east-1a
 us-east-1b
 ```
 
-### Figure 9 — Select Availability Zones
+### Select Availability Zones
 
 <p align="center">
   <img src="./screenshots/select-az.png" width="950"/>
@@ -231,7 +231,7 @@ Choose:
 10.0.3.0/24
 ```
 
-### Figure 10 — Select Subnets
+### Select Subnets
 
 <p align="center">
   <img src="./screenshots/select-subnets.png" width="950"/>
@@ -271,7 +271,7 @@ Choose:
 | Template | Dev/Test |
 | Availability | Multi-AZ DB Instance |
 
-### Figure 12 — Configure Engine Options
+### Configure Engine Options
 
 <p align="center">
   <img src="./screenshots/mysql-engine.png" width="950"/>
@@ -291,7 +291,7 @@ Choose:
 | Master Username | main |
 | Master Password | lab-password |
 
-### Figure 13 — Configure Database Credentials
+### Configure Database Credentials
 
 <p align="center">
   <img src="./screenshots/db-credentials.png" width="950"/>
@@ -310,7 +310,7 @@ Choose:
 | Class Type | Burstable |
 | Instance Class | db.t3.micro |
 
-### Figure 14 — Configure DB Instance Class
+### Configure DB Instance Class
 
 <p align="center">
   <img src="./screenshots/db-instance-class.png" width="950"/>
@@ -329,7 +329,7 @@ Choose:
 | Storage Type | General Purpose SSD |
 | Allocated Storage | 20 GB |
 
-### Figure 15 — Configure Storage
+### Configure Storage
 
 <p align="center">
   <img src="./screenshots/storage-config.png" width="950"/>
@@ -348,7 +348,7 @@ Choose:
 | VPC | Lab VPC |
 | Security Group | DB Security Group |
 
-### Figure 16 — Configure Connectivity
+### Configure Connectivity
 
 <p align="center">
   <img src="./screenshots/connectivity-config.png" width="950"/>
@@ -377,7 +377,7 @@ Enable Enhanced Monitoring
 | Automatic Backups | Disabled |
 | Encryption | Disabled |
 
-### Figure 18 — Additional Configuration
+### Additional Configuration
 
 <p align="center">
   <img src="./screenshots/additional-config.png" width="950"/>
@@ -405,7 +405,7 @@ Wait until the database status changes to:
 Available
 ```
 
-### Figure 20 — Database Available
+### Database Available
 
 <p align="center">
   <img src="./screenshots/db-available.png" width="950"/>
@@ -425,7 +425,7 @@ Copy the endpoint value:
 lab-db.xxxx.us-east-1.rds.amazonaws.com
 ```
 
-### Figure 21 — Copy RDS Endpoint
+### Copy RDS Endpoint
 
 <p align="center">
   <img src="./screenshots/rds-endpoint.png" width="950"/>
