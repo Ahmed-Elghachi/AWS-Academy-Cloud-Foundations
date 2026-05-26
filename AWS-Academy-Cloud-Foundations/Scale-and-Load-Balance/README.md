@@ -22,18 +22,6 @@ You will create:
 
 ---
 
-# 🧠 Architectural Diagram
-
-<p align="center">
-  <img src="./screenshots/elb-autoscaling-architecture.png" width="950"/>
-</p>
-
-<p align="center">
-  <em>Figure 1: AWS Auto Scaling and Load Balancing Architecture</em>
-</p>
-
----
-
 # 🎯 Objectives
 
 By the end of this lab, you will be able to:
@@ -48,11 +36,6 @@ By the end of this lab, you will be able to:
 
 ---
 
-# ⏱️ Duration
-
-Approximate duration: **30 minutes**
-
----
 
 # 🔒 AWS Service Restrictions
 
@@ -97,14 +80,14 @@ Amazon EC2 Auto Scaling automatically adjusts the number of EC2 instances based 
 
 ---
 
-# 📸 Figure 2 — AWS Lab Environment
+# 📸 Scenario
 
 <p align="center">
   <img src="./screenshots/start-lab.png" width="900"/>
 </p>
 
 <p align="center">
-  <em>Figure 2: AWS Lab Environment</em>
+  <em>Figure 2: Scenario </em>
 </p>
 
 ---
