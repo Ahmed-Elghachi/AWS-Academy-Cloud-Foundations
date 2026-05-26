@@ -189,7 +189,6 @@ Configure:
 | Description | DB Subnet Group |
 | VPC | Lab VPC |
 
-### Create DB Subnet Group
 
 <p align="center">
   <img src="./screenshots/create-subnet-group.png" width="950"/>
@@ -210,7 +209,6 @@ us-east-1a
 us-east-1b
 ```
 
-### Select Availability Zones
 
 <p align="center">
   <img src="./screenshots/select-az.png" width="950"/>
@@ -230,8 +228,6 @@ Choose:
 10.0.1.0/24
 10.0.3.0/24
 ```
-
-### Select Subnets
 
 <p align="center">
   <img src="./screenshots/select-subnets.png" width="950"/>
@@ -271,7 +267,6 @@ Choose:
 | Template | Dev/Test |
 | Availability | Multi-AZ DB Instance |
 
-### Configure Engine Options
 
 <p align="center">
   <img src="./screenshots/mysql-engine.png" width="950"/>
@@ -291,7 +286,6 @@ Choose:
 | Master Username | main |
 | Master Password | lab-password |
 
-### Configure Database Credentials
 
 <p align="center">
   <img src="./screenshots/db-credentials.png" width="950"/>
@@ -310,7 +304,6 @@ Choose:
 | Class Type | Burstable |
 | Instance Class | db.t3.micro |
 
-### Configure DB Instance Class
 
 <p align="center">
   <img src="./screenshots/db-instance-class.png" width="950"/>
@@ -329,7 +322,6 @@ Choose:
 | Storage Type | General Purpose SSD |
 | Allocated Storage | 20 GB |
 
-### Configure Storage
 
 <p align="center">
   <img src="./screenshots/storage-config.png" width="950"/>
@@ -348,7 +340,6 @@ Choose:
 | VPC | Lab VPC |
 | Security Group | DB Security Group |
 
-### Configure Connectivity
 
 <p align="center">
   <img src="./screenshots/connectivity-config.png" width="950"/>
@@ -377,7 +368,6 @@ Enable Enhanced Monitoring
 | Automatic Backups | Disabled |
 | Encryption | Disabled |
 
-### Additional Configuration
 
 <p align="center">
   <img src="./screenshots/additional-config.png" width="950"/>
