@@ -134,7 +134,7 @@ Configure:
 </p>
 
 <p align="center">
-  <em>Figure 5: Create DB Security Group</em>
+  <em>Figure 2: Create DB Security Group</em>
 </p>
 
 ---
@@ -156,7 +156,7 @@ Configure:
 </p>
 
 <p align="center">
-  <em>Figure 6: Configure Database Security Group Rule</em>
+  <em>Figure 3: Configure Database Security Group Rule</em>
 </p>
 
 ---
@@ -195,7 +195,7 @@ Configure:
 </p>
 
 <p align="center">
-  <em>Figure 8: Create DB Subnet Group</em>
+  <em>Figure 4: Create DB Subnet Group</em>
 </p>
 
 ---
@@ -215,7 +215,7 @@ us-east-1b
 </p>
 
 <p align="center">
-  <em>Figure 9: Select Availability Zones</em>
+  <em>Figure 5: Select Availability Zones</em>
 </p>
 
 ---
@@ -234,7 +234,7 @@ Choose:
 </p>
 
 <p align="center">
-  <em>Figure 10: Select Database Subnets</em>
+  <em>Figure 6: Select Database Subnets</em>
 </p>
 
 ---
@@ -273,7 +273,7 @@ Choose:
 </p>
 
 <p align="center">
-  <em>Figure 12: Configure MySQL Engine</em>
+  <em>Figure 7: Configure MySQL Engine</em>
 </p>
 
 ---
@@ -292,7 +292,7 @@ Choose:
 </p>
 
 <p align="center">
-  <em>Figure 13: Configure Database Credentials</em>
+  <em>Figure 8: Configure Database Credentials</em>
 </p>
 
 ---
@@ -310,7 +310,7 @@ Choose:
 </p>
 
 <p align="center">
-  <em>Figure 14: Configure DB Instance Class</em>
+  <em>Figure 9: Configure DB Instance Class</em>
 </p>
 
 ---
@@ -328,7 +328,7 @@ Choose:
 </p>
 
 <p align="center">
-  <em>Figure 15: Configure Database Storage</em>
+  <em>Figure 10: Configure Database Storage</em>
 </p>
 
 ---
@@ -346,7 +346,7 @@ Choose:
 </p>
 
 <p align="center">
-  <em>Figure 16: Configure Database Connectivity</em>
+  <em>Figure 11: Configure Database Connectivity</em>
 </p>
 
 ---
@@ -374,7 +374,7 @@ Enable Enhanced Monitoring
 </p>
 
 <p align="center">
-  <em>Figure 18: Additional Database Configuration</em>
+  <em>Figure 12: Additional Database Configuration</em>
 </p>
 
 ---
@@ -402,7 +402,7 @@ Available
 </p>
 
 <p align="center">
-  <em>Figure 20: Amazon RDS Database Available</em>
+  <em>Figure 13: Amazon RDS Database Available</em>
 </p>
 
 ---
@@ -415,14 +415,13 @@ Copy the endpoint value:
 lab-db.xxxx.us-east-1.rds.amazonaws.com
 ```
 
-### Copy RDS Endpoint
 
 <p align="center">
   <img src="./screenshots/rds-endpoint.png" width="950"/>
 </p>
 
 <p align="center">
-  <em>Figure 21: Copy Database Endpoint</em>
+  <em>Figure 14: Copy Database Endpoint</em>
 </p>
 
 ---
@@ -431,17 +430,17 @@ lab-db.xxxx.us-east-1.rds.amazonaws.com
 
 ## Open Web Application
 
-1. Copy the Web Server IP address
+1. To discover the WebServer IP address, choose on the  AWS Details drop down menu above these instructions. Copy the IP address value. 
 2. Open the IP address in a browser
 
-### Figure 22 — Open Web Application
+###  Open Web Application
 
 <p align="center">
   <img src="./screenshots/web-application.png" width="950"/>
 </p>
 
 <p align="center">
-  <em>Figure 22: Web Application Interface</em>
+  <em>Figure 15: Web Application Interface</em>
 </p>
 
 ---
@@ -454,14 +453,14 @@ Click:
 RDS
 ```
 
-### Figure 23 — RDS Configuration Page
+###  RDS Configuration Page
 
 <p align="center">
   <img src="./screenshots/rds-page.png" width="950"/>
 </p>
 
 <p align="center">
-  <em>Figure 23: Configure Web Application Database</em>
+  <em>Figure 16: Configure Web Application Database</em>
 </p>
 
 ---
@@ -475,14 +474,14 @@ RDS
 | Username | main |
 | Password | lab-password |
 
-### Figure 24 — Configure Database Connection
+### Configure Database Connection
 
 <p align="center">
   <img src="./screenshots/db-connection.png" width="950"/>
 </p>
 
 <p align="center">
-  <em>Figure 24: Configure Application Database Connection</em>
+    <em>Figure 17: Configure Application Database Connection</em>
 </p>
 
 ---
@@ -500,14 +499,13 @@ Submit
 
 The application now connects successfully to Amazon RDS.
 
-### Figure 26 — Address Book Application
 
 <p align="center">
   <img src="./screenshots/address-book.png" width="950"/>
 </p>
 
 <p align="center">
-  <em>Figure 26: Address Book Application Using Amazon RDS</em>
+  <em>Figure 18: Address Book Application Using Amazon RDS</em>
 </p>
 
 ---
@@ -522,14 +520,14 @@ You can now:
 
 The data is stored inside the RDS database.
 
-### Figure 27 — Add Contact
+###  Add Contact
 
 <p align="center">
   <img src="./screenshots/add-contact.png" width="950"/>
 </p>
 
 <p align="center">
-  <em>Figure 27: Add Contact to Database</em>
+  <em>Figure 19: Add Contact to Database</em>
 </p>
 
 ---
