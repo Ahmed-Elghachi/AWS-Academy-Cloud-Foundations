@@ -80,14 +80,14 @@ Amazon EC2 Auto Scaling automatically adjusts the number of EC2 instances based 
 
 ---
 
-# 📸 Scenario
+# 📸 Scenario Overview
 
 <p align="center">
   <img src="./screenshots/start-lab.png" width="900"/>
 </p>
 
 <p align="center">
-  <em>Figure 2: Scenario </em>
+  <em>Figure 2: Scenario Overview </em>
 </p>
 
 ---
