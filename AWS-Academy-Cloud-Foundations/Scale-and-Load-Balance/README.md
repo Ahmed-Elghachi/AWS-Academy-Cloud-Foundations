@@ -87,7 +87,7 @@ Amazon EC2 Auto Scaling automatically adjusts the number of EC2 instances based 
 </p>
 
 <p align="center">
-  <em>Figure 2: Scenario Overview </em>
+  <em>Figure 1: Initial and Final AWS Infrastructure </em>
 </p>
 
 ---
