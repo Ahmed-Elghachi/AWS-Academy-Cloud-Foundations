@@ -380,6 +380,15 @@ Scaling Policy:
 | Metric | Average CPU Utilization |
 | Target Value | 60 |
 
+---
+Choose **Add tag** and configure the following:
+
+| Setting | Value |
+|---|---|
+| Key | Name |
+| Value | Lab Instance |
+
+---
 Click:
 
 ```text
