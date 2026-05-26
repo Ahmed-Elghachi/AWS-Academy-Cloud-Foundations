@@ -101,18 +101,6 @@ Amazon EC2 Auto Scaling automatically adjusts the number of EC2 instances based 
 
 ---
 
-# 📸 Figure 3 — EC2 Dashboard
-
-<p align="center">
-  <img src="./screenshots/ec2-dashboard.png" width="900"/>
-</p>
-
-<p align="center">
-  <em>Figure 3: EC2 Dashboard</em>
-</p>
-
----
-
 ## Step 2 — Verify Existing Instance
 
 - Open Instances
