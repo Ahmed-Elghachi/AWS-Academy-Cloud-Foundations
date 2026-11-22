@@ -90,11 +90,11 @@ Each lab is designed to reinforce theoretical concepts with practical implementa
 - 🔐 [IAM Introduction Lab](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/IAM-Introduction-Lab)
 - 🌐 [Build your VPC and Launch a Web Server](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/Build-your-VPC-and-Launch-a-Web-Server)
 - 🖥️ [Introduction to Amazon EC2 ](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/Introduction-to-Amazon-EC2)
-- ⚡ [Activity : AWS Lambda ](./AWS-Lambda)
-- ☁️ [Activity : AWS Elastic Beanstalk ](./AWS-Elastic-Beanstalk)
-- 🗄️ [Working with EBS ](./Working-with-EBS)
-- ⚖️ [Build Your DB Server and Interact With Your DB Using an App ](./Build-Your-DB-Server)
--    [Scale and Load Balance Your Architecture ](./Scale-and-Load-Balance)
+- ⚡ [Activity : AWS Lambda ](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/AWS-Lambda))
+- ☁️ [Activity : AWS Elastic Beanstalk ](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/AWS-Elastic-Beanstalk)
+- 🗄️ [Working with EBS ](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/Working-with-EBS)
+- ⚖️ [Build Your DB Server and Interact With Your DB Using an App ](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/Build-Your-DB-Server)
+-    [Scale and Load Balance Your Architecture ](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/Scale-and-Load-Balance)
 
 ---
 
