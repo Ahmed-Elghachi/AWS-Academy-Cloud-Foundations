@@ -88,7 +88,7 @@ This repository documents my learning journey through AWS Cloud Foundations. It 
 Each lab is designed to reinforce theoretical concepts with practical implementation.
 
 - 🔐 [IAM Introduction Lab](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/IAM-Introduction-Lab)
-- 🌐 [Build your VPC and Launch a Web Server](./Build-your-VPC-and-Launch-a-Web-Server)
+- 🌐 [Build your VPC and Launch a Web Server](https://github.com/Ahmed-Elghachi/AWS-Academy-Cloud-Foundations/tree/main/AWS-Academy-Cloud-Foundations/Build-your-VPC-and-Launch-a-Web-Server)
 - 🖥️ [Introduction to Amazon EC2 ](./Introduction-to-Amazon-EC2)
 - ⚡ [Activity : AWS Lambda ](./AWS-Lambda)
 - ☁️ [Activity : AWS Elastic Beanstalk ](./AWS-Elastic-Beanstalk)
